@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员登陆界面</title>
+    <link rel="stylesheet" href="{$CSS_PATH}base.css">
+    <link rel="stylesheet" href="{$CSS_PATH}login.css">
+</head>
+<body>
+<div class="admin_login_box">
+    <div class="admin_login_in">
+            <form action="index.php?m=admin&c=index&a=checkLogin" method="post">
+                <input class="user" type="text" name="auser" id="auser" value="">
+                <input class="pass" type="password" name="apwd" id="apass" value="">
+                <input type="submit" class="sub" value="">
+            </form>
+    </div>
+</div>
+
+</body>
+</html>

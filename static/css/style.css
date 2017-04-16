@@ -1,0 +1,12 @@
+body,p,ul,ol,dl,li,dt,dd,h1,h2,h3,h4,h5,h6,form,input{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+   font: 20px/1.5 Tahoma,Helvetica,Arial,'宋体',sans-serif;
+}
+ a{
+    text-decoration: none;
+} 
+img{
+    border: 0;
+}

@@ -1,0 +1,65 @@
+.admin_login_box{
+    width:600px;
+    height: 352px;
+    color: red;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+input{
+    background-color: transparent;
+    color: #fff;
+}
+body{
+    width: 1000px;
+    height:100%;
+    margin: 0 auto;
+    background-image: url("../images/loginbg.png");
+}
+.admin_login_box{
+    width: 450px;
+    height:253px;
+    border-top: 3px solid #00A0E9;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.admin_login_in{
+    width: 450px;
+    height:250px;
+    background-image: url("../images/loginin.png");
+    margin: 0 auto;
+    position: relative;
+}
+.user{
+    position: absolute;
+    top: 78px;
+    right: 22px;
+    width: 200px;
+    height:23px;
+    border: 0;
+}
+.pass{
+    position: absolute;
+    top: 150px;
+    right:22px;
+    width: 200px;
+    height: 23px;
+    border: 0;
+}
+.sub{
+    width: 205px;
+    height: 32px;
+    position: absolute;
+    top: 202px;
+    right: 20px;
+    opacity: 0.2;
+    cursor: pointer;
+}
+.reg{
+   position: absolute;
+    top:210px;
+    left: 50px;
+    color: #fff;
+}
+.reg a{
+    color: #fff;
+}

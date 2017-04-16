@@ -1,0 +1,41 @@
+#addBorrow{
+	width: 80%;
+	border: 1px solid #ccc;
+	margin-left: 20px;
+	padding-left: 50px;
+	padding-bottom: 30px;
+	margin-top:10px;
+}
+#addBorrow h4{
+	width: 100%;
+	text-align: center;
+	color:#666;
+	height: 60px;
+	line-height: 60px;
+}
+#addBorrow p{
+	margin-bottom: 10px;
+}
+#typename{
+	margin-left: 20px;
+}
+#timesum{
+	width: 120px;
+	height: 25px;
+	margin-left: 20px;
+}
+#maxmoney{
+	margin-left: 20px;
+}
+#minmoney{
+	margin-left: 20px;
+}
+#saverFeed{
+	margin-left: 20px;
+}
+#invest{
+	margin-left: 20px;
+}
+#table2 th{
+ text-align: center;
+}

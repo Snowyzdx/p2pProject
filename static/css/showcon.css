@@ -1,0 +1,48 @@
+span{
+    font-size:16px;
+    font-weight:bold;
+    color:#333;
+    display:block;
+    text-align:left;
+    padding:10px 5px;
+}
+form{
+    padding-left:30px;
+    position:relative;
+}
+.loadshow{
+    width:20%;
+    height:100%;
+}
+.loadimg{
+    overflow:hidden;
+    position:absolute;
+    width:60%;
+    height:100%;
+    right:0;
+    top:5px;
+}
+.progressbox{
+    width:100%;
+    height:20px;
+    border:1px solid #aaa;
+    display:none;
+}
+.progress{
+    width:0%;
+    height:100%;
+    background:greenyellow;
+}
+.img{
+    width:100%;
+    /*height:100*/
+}
+.img img{
+    width:100%;
+}
+.posdiv{
+    width: 200px;
+}
+.tagdiv{
+    width: 200px;
+}

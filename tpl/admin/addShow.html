@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}style.css">
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}showcon.css">
+	<title>人人理财后台管理系统</title>
+</head>
+<body>
+	----------------添加文章------------
+	<form action="index.php?m=admin&c=news&a=addNews">
+		<div class="loadshow">
+			<span>文章标题:</span>
+			<input type="text" name="title" value=""/><br>
+			<span>内容:</span><textarea name="con" cols="30" rows="10"></textarea><br>
+		</div>		
+		<div class="loadimg">
+			<span>文章图片:</span>
+			<input type="file" class="file" multipe><br>
+			<div class="img">
+				<img src="" alt="">
+			</div>
+			<div class="progressbox">
+				<div class="progress"></div>
+			</div>
+		</div><br>
+		----------------文章推荐位---------
+		<input type="radio" value='1' name="pos">轮播
+		<input type="radio" value='2' name="pos">新闻 	 
+	</form>
+</body>
+</html>
