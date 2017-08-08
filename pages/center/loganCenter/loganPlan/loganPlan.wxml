@@ -1,0 +1,42 @@
+<view id="noReturned">
+    <view class="title">待还</view>
+    <view class="zijin">
+        <view class="yue">
+            账户余额￥0.00
+        </view>
+        <view class="chongzhi" bindtap="chongzhi">
+            充值
+        </view>
+    </view>
+   <scroll-view scroll-y="true" id="noReturnList">
+        <view class="noRetrunItiem">
+            <view class="shuoming">
+                <view class="detail" bindtap="showDetail">
+                    详情
+                </view>
+                <view class="qishu">借款日期2016.11.01（9期）   </view>
+            </view>
+            <view class="about">
+                <view class="returnMoney">
+                    <text>￥180.03</text>
+                    <text>第9期还款</text>
+                </view>
+                <view class="returnTime">
+                    <text>2017.06.11</text>
+                    <text bindtap="returnMoneyPage">
+                         还款 
+                    </text>
+                    <text>
+                        距还款日29天
+                    </text>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view id="returned" bindtap="returnedLogan">
+        <text>已还借款项目</text>
+        <i class="iconfont icon-youjiantou"></i>
+    </view>
+</view>
+
+

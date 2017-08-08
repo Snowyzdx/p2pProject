@@ -1,0 +1,264 @@
+page{
+    background: #ECF0F3;
+}
+.title{
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    background: #fff;
+    box-sizing: border-box;
+    border-top: 2rpx solid #eee;
+    padding-right:20rpx;
+}
+.title text:nth-child(1){
+    display: block;
+    float: left;
+    color: #333;
+    margin-left: 20rpx;
+}
+.title text:nth-child(2){
+    display: block;
+    float: right;
+    color: red;
+    margin-right: 20rpx;
+}
+/*投资详情*/
+.container{
+    width: 100%;
+    padding-left: 20rpx;
+    box-sizing: border-box;
+    background: #fff;
+    height: 220rpx;
+    padding-bottom: 20rpx;
+}
+.container view{
+    width: 100%;
+    height: 60rpx;
+    line-height: 80rpx;
+    float: right;
+    background: #fff;
+}
+.container view:nth-child(1){
+    border-top:2rpx solid #eee;
+}
+.container view:nth-child(3){
+    box-sizing: border-box;
+    border-bottom: 2rpx solid #eee;
+    height: 100rpx;
+}
+
+.container view text{
+    display: block;
+    height: 100%;
+    float: left;
+    line-height: 80rpx;
+    font-size: 34rpx;
+}
+.container view text:nth-child(1){
+    text-align: left;
+    width: 40%;
+    color: #999;
+    height: 100rpx;
+}
+.container view text:nth-child(2){
+    text-align: left;
+    color: #4D4D4D;
+}
+/*签署协议*/
+.agreement{
+    width: 100%;
+    height: 100rpx;
+    background: #fff;
+    font-size: 30rpx;
+    line-height: 100rpx;
+    padding-left: 20rpx;
+}
+checkbox-group{
+    display: inline-block;
+    color: red;
+}
+.agreement navigator{
+    display: inline-block;
+    color: #73A1C4;
+    width: 50%;
+    margin-left: 30rpx;
+    font-weight: 600;
+    font-size: 30rpx;
+}
+
+/*到期处理方式*/
+.method{
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #fff;
+    margin-top: 34rpx;
+    box-sizing: border-box;
+    padding:0 20rpx;
+}
+.method view:nth-child(1){
+    float: left;
+    height: 100%;
+    color: #373737;
+    font-size: 30rpx;
+    font-weight: 600;
+}
+.method view:nth-child(2){
+    float: right;
+    color: #aaa;
+    font-size: 30rpx;
+}
+
+/*处理方式表单*/
+.methodHide{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -750rpx;
+    z-index: 999;
+}
+.hideTop{
+    width: 100%;
+    height: 40%;
+    background: #000;
+    opacity: 0.8;
+    margin-top: 0;
+    position: relative;
+}
+.hideTop view{
+    width: 100%;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    position: absolute;
+    bottom: 20rpx;
+}
+.hideTop view i{
+    color: #fff;
+    font-size: 36rpx;
+}
+.hideCon{
+    width: 100%;
+    height: 60%;
+    background: #fff;
+    box-sizing: border-box;
+    padding-top: 20rpx;
+    color: #333;
+    font-size: 30rpx;
+    font-weight: 600;
+    position: relative;
+}
+.swiper-tab{
+    width: 100%;
+    height: 90rpx;
+    text-align: center;
+    line-height: 84rpx;
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    border-bottom: 2rpx solid #ccc;
+    border-top: 2rpx solid #ccc;
+}
+.swiper-tab-item{
+    display: inline-block;
+    width: 33.33%;
+    color:#666;
+}
+.swiper-tab-item i{
+    font-size: 40rpx;
+}
+.active{
+    color:#EE1919;
+    border-bottom: 4rpx solid #EE1919;
+}
+swiper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90rpx;
+}
+/*优惠券*/
+.discount{
+    width: 100%;
+    height: 200rpx;
+    background: #fff;
+    margin-top: 30rpx;
+    box-sizing: border-box;
+    padding-left: 20rpx;
+}
+.discount .con{
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.discount .con:nth-child(1){
+    border-bottom: 2rpx solid #F2F2F2
+}
+.discount .con .title{
+    float: left;
+    height: 100%;
+    width: 50%;
+    color: #373737;
+    font-size: 30rpx;
+    font-weight: 600;
+}
+.discount .con .toDetail{
+    width: 50%;
+    float: right;
+    text-align: right;
+    box-sizing: border-box;
+    padding-right: 20rpx;
+}
+.discount .con view text{
+    color: #EF392F;
+    font-size: 34rpx;
+    font-weight: 600;
+}
+.discount .con view i{
+    color: #aaa;
+    font-size: 30rpx;
+}
+/*提交*/
+.sub{
+    width: 100%;
+    height: 120rpx;
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    box-sizing: border-box;
+    padding-right: 20rpx;
+    line-height: 120rpx;
+}
+.sub label{
+    display: inline-block;
+    width:70%;
+    height: 100%;
+    line-height: 120rpx;
+    color: #333;
+    font-size: 36rpx;
+    text-align: left;
+}
+.sub button{
+    float: right;
+    margin-top: 10rpx;
+    width: 200rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    color: #fff;
+    font-size: 36rpx;
+    background: #EF3834;
+}
+/*footer*/
+.footer{
+    width: 100%;
+    height: 200rpx;
+    position: absolute;
+    bottom: 100rpx;
+    color: #aaa;
+    font-size: 28rpx;
+    text-align: center;
+    line-height: 200rpx;
+}

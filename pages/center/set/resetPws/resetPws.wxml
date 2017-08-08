@@ -1,0 +1,27 @@
+<view id="mainContainer">
+    <view class="logo">
+    </view>
+    <view class="phoneNum">
+       <input type="number" value="{{phoneNum}}"/>
+    </view>
+    <view class="code">
+       <input type="number" value="{{code}}"  bindblur="valCode"/>
+       <button bindtap="sendMsg">{{timeTiper}}</button>
+    </view>
+    <view class="notice01">{{notice01}}</view>
+    <form bindsubmit="resetPws">
+        <view>
+          <label>输入账号</label> <input type="number" value="{{username}}" bindblur="getUsername"/>
+        </view>
+        <view>
+            <label>输入新密码</label><input password='true'  value="{{pwd01}}" bindblur="getFirstPwd"/>
+        </view>
+        <view>
+           <label>再次输入密码</label><input password='true' value="{{pwd02}}" bindblur="getSecondPwd"/>
+        </view>
+        <view class="notice">
+        {{notice02}}
+        </view>
+        <button class="save" form-type="submit" disabled="{{flag}}">保  存</button>
+    </form>
+</view>

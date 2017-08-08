@@ -1,0 +1,51 @@
+<!--基本信息-->
+<view class="head"bindtap="setmsg">
+    <view class="toux"></view>
+    <view class="xinxi">
+        <text>昵称</text>
+        <text>个人信息、地址管理</text>
+    </view>
+    <view class="tubiao">
+        <i class="iconfont icon-erweima" style="margin-right:30rpx;"></i>
+        <i class="iconfont icon-youjiantou i-you"></i>
+    </view>
+</view>
+<!--账号安全-->
+<view class="safe">
+    <text>账号安全</text>
+    <i class="iconfont icon-youjiantou i-you" style=""></i>
+</view>
+<!--推荐给好友-->
+<view class="fenxiang">
+    <view class="tuijian">
+        <text>推荐给好友</text>
+        <i class="iconfont icon-youjiantou i-you"></i>
+    </view>
+    <view class="guanzhu">
+        <text>在微信上关注我们</text>
+        <i class="iconfont icon-youjiantou i-you"></i>
+    </view>
+</view>
+<!--关于-->
+<view class="about">
+    <view id="about">
+        <text>关于人人理财</text>
+        <i class="iconfont icon-youjiantou i-you"></i>
+    </view>
+    <view class="tel">
+        <text>客服热线</text>
+        <text>400-810-8818</text>
+    </view>
+</view>
+<!--提示-->
+<view class="tishi">
+    热线服务时间09:30-21:00周一至周五
+</view>
+<!--退出-->
+<view class="out">
+    退出当前账号
+</view>
+<!--footer-->
+<view class="footer">
+*预期收益非平台承诺收益，市场有风险，投资需谨慎
+</view>

@@ -1,0 +1,26 @@
+<view id="mainContainer">
+    <form bindsubmit="addUser">
+        <view class="username tr">
+            <label><i class="iconfont icon-yonghuming"></i>
+            <input type="number" bindblur="getUsername" value="{{username}}"/>
+            </label>
+            <view id="forUsernaem" class="notice" style="color:{{active01}}">{{notice01}}</view>
+        </view>
+        <view class="password tr">
+            <label>
+             <i class="iconfont icon-mima"></i>
+            <input  password="true" bindblur="getPassword" maxlength="30" value="{{password}}"/>
+            </label>
+            <view class="notice" style="color:{{active02}}">{{notice02}}</view>
+        </view>
+        <view class="valCode">
+            <label>
+                <input type="text" value="" bindblur="getCode"/>
+                <view bindtap="getVerifyCode">{{ VerifyCode}}</view>
+             </label>    
+                <view class="notice" style="color:{{active03}}">{{notice03}}</view>
+        </view>
+        <button class="sign tr" form-type="submit">注 册</button>
+    </form> 
+    <view class="toLogin" bindtap="toLogin">已有账号?</view>
+</view>

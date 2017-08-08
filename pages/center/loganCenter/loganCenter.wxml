@@ -1,0 +1,108 @@
+<swiper style="height:1160rpx;background:#F5F2ED;" current="{{currentTab}}" duration="300"  bindchange="swiperTab">
+    <swiper-item style="height:100%;width:100%;">
+        <!--额度-->
+        <view id="edu">
+            <view class="tiedu">
+                提升额度
+                <i class="iconfont icon-youjiantou"></i>
+            </view>
+            <view class="text01">现有额度
+            </view>
+            <view class="text03">
+                900
+            </view>
+            <view class="text02">最低可借额度4000</view>
+            <view class="toLogan">我要借款</view>
+        </view>
+        <!--还款计划-->
+     <view id="plan">
+        <view class="returnPlan" bindtap="returnPlan">
+            还款计划
+            <i class="iconfont icon-youjiantou"></i>
+        </view>
+        <scroll-view scroll-y="true" id="returnNowList" >
+            <view class="returnNowItem" catchtap="toReturnMoney">
+               <view class="retrunMoney">
+                    <text>本期还款金额（9/9）</text>
+                    <text>180.0</text>
+               </view>
+               <view class="time">
+                    <text>距还款日30天</text>
+                    <text>2017.06.11</text>
+               </view>
+            </view>
+
+            <view class="returnNowItem">
+               <view class="retrunMoney">
+                    <text>本期还款金额（9/9）</text>
+                    <text>180.0</text>
+               </view>
+               <view class="time">
+                    <text>距还款日30天</text>
+                    <text>2017.06.11</text>
+               </view>
+            </view>
+
+            <view class="returnNowItem">
+               <view class="retrunMoney">
+                    <text>本期还款金额（9/9）</text>
+                    <text>180.0</text>
+               </view>
+               <view class="time">
+                    <text>距还款日30天</text>
+                    <text>2017.06.11</text>
+               </view>
+            </view>
+
+            <view class="returnNowItem">
+               <view class="retrunMoney">
+                    <text>本期还款金额（9/9）</text>
+                    <text>180.0</text>
+               </view>
+               <view class="time">
+                    <text>距还款日30天</text>
+                    <text>2017.06.11</text>
+               </view>
+            </view>
+        </scroll-view>
+    </view>
+    </swiper-item>
+    <!--更多借款相关问题-->
+    <swiper-item style="height:100%;width:100%;background:#fff">
+        <view class="quest">
+        <i class="iconfont icon-jiekuan" style="color:#05B8FF"></i>
+        借款问题
+        </view>
+        <scroll-view scroll-y="true" class="questList">
+            <view>
+                <text>1、降低开发经典款降低开发经典款降低开发经典款降低开发经典款</text>
+                <i class="iconfont icon-youjiantou" bindtap="showNews"></i>
+            </view>
+            <view>
+                <text>2、降低开发经典款降低开发经典款降低开发经典款降低开发经典款</text>
+                <i class="iconfont icon-youjiantou"></i>
+            </view>
+            <view>
+                <text>3、降低开发经典款降低开发经典款降低开发经典款降低开发经典款</text>
+                <i class="iconfont icon-youjiantou"></i>
+            </view>
+        </scroll-view>
+        <view class="quest">
+        <i class="iconfont icon-jiekuan" style="color:#05B8FF"></i>
+            还款问题
+        </view>
+        <scroll-view class="questList">
+        </scroll-view>
+    </swiper-item>
+</swiper>
+<view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+    <i style="font-size:60rpx" class="iconfont icon-shouyeshouye"></i>
+</view>
+<view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+        <i class="iconfont icon-gengduo"></i>
+</view>
+</view>
+
+
+

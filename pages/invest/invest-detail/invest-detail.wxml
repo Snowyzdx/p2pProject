@@ -1,0 +1,114 @@
+<view id="mainContainer">
+    <view id="header">——{{typename}}——</view>
+    <view class="banner">
+        <view class="invest">{{invest}}%</view>
+        <view>预期总收益率</view>
+    </view>
+<view class="bar">
+    <view class="timesum">
+        <text>{{timesum}}天</text>
+        <text>封闭期</text>
+    </view>
+    <view class="minmoney">
+        <text>{{minmoney}}</text>
+        <text>起投金额（元）</text>
+    </view>
+</view>
+<!--合计收益-->
+<view class="investMoney">
+    <text>轻松有钱</text>
+    <text>投资1万元，{{timesum}}天可预期收益{{investMoney}}元</text>
+</view>
+<!--投资日期说明-->
+<view class="dateState">
+  <view class="first">
+    <text>满标日期开始计息</text>
+    <text>项目到期坐享收益</text>
+  </view>
+  <view class="second">
+    •-------------------•
+  </view>
+  <view class="third">
+    <text>今日</text>
+    <text>{{timesum}}天后</text>
+  </view>
+</view>
+<!--累计参与人数-->
+<view class="personNum">
+{{text}}:<text>{{num}}</text>
+</view>
+<!--安全保障-->
+<view class="safe">
+    <view class="title" bindtap="toSafe">
+        <text>安全保障</text>
+        <i class="iconfont icon-youjiantou"></i>
+    </view>
+    <view class="safeCon">
+        <view>
+            <i class="iconfont icon-anquan"></i>
+            <text>贷款履约保证保险</text>
+        </view>
+        <view>
+            <i class="iconfont icon-anquan"></i>
+            <text>账户安全保障</text>
+        </view>
+    </view>
+</view>
+<!--产品详情-->
+<view class="projectDetail">
+    <view class="title">产品详情</view>
+    <view class="con">
+        <text>•募集时间:{{createDate}}~{{startDate}}</text>
+        <text>•投资撮合成功当日开始计算可预期收益</text>
+        <text>•若选择到期退出，封闭期结束当天（如果遇周末节假日顺延至下一工作日）系统按照授权将出借人的债权转让</text>
+        <text>•若选择本息续投，封闭期结束当天（如果遇周末节假日顺延至下一工作日），完成债权转让，本金与收益自动投资到用户主动选择的出借计划</text>
+        <text>•若选择本金续投，封闭期结束当天如果遇周末节假日顺延至下一工作日）完成债权转让，本金自动投资到用户主动选择的出借计划，已赚取得收益部分届时将退出可提现</text>
+    </view>
+</view>
+<!--更多-->
+<view class="more">
+    <view class="tag" bindtap="zijinLx">
+        <text>资金流向</text>
+        <view>
+            <text class="see">借款详情</text>
+            <i class="iconfont icon-youjiantou"></i>
+        </view>
+    </view>
+    <view class="tag" bindtap="toagreement">
+        <text>协议范本</text>
+        <view>
+            <text class="see">查看协议</text>
+            <i class="iconfont icon-youjiantou"></i>
+        </view>
+    </view>
+    <view class="tag" bindtap="toBanks">
+        <text>支持的银行及限额数</text>
+        <view>
+           <text class="see">查看详情</text>
+           <i class="iconfont icon-youjiantou"></i>
+        </view>
+    </view>
+</view>
+<view class="footer">
+    *预期收益非平台承诺收益，市场有风险，投资需谨慎
+</view>
+<view class="space"></view>
+<view class="join" bindtap="join">立即参与</view>
+<!--投资单-->
+<view class="hideCon" style="left:{{position}}">
+    <view class="hideTop" bindtap="return"></view>
+    <view class="investForm">
+        <view class="first">
+            <text>最低起投：￥{{minmoney}}</text>
+            <text>剩余可投：￥{{num}}</text>
+        </view>
+        <view class="second">
+            <text>预计到期总收益：￥{{myinvestMoney}}</text>
+        </view>
+        <view class="third">
+            <input type="number" value="{{myinvest}}" bindblur="getmyinvest" bindinput="getmyinvestMoney"/>
+            <button bindtap="creatInvest">参与</button>
+        </view>
+    </view>
+</view>
+</view>

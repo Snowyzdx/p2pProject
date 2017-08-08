@@ -1,0 +1,134 @@
+/* pages/regist/regist.wxss */
+page{
+    height: 100%;
+   background-image: url("/images/signbk.png");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: bottom;
+}
+#mainContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    background: #030012;
+    opacity: 0.8;
+}
+/*注册表单*/
+form{
+    width: 90%;
+    margin-top: 140rpx;
+    position: relative;
+}
+.tr{
+    width: 100%;
+    height: 130rpx;
+    line-height: 130rpx;
+    margin-top: 40rpx;
+
+}
+label {
+    position: relative;
+    display: block;
+    height: 80rpx;
+    width: 100%;
+    line-height: 120rpx;
+    border-bottom: 2rpx solid #B2ADCB;
+    box-sizing: border-box;
+}
+label i{
+    display: block;
+    float: left;
+    width: 60rpx;
+    height: 60rpx;
+    font-size: 40rpx;
+    color: #fff;
+    margin-right: 10rpx;
+}
+label input{
+    display: block;
+    float: left;
+    width: 80%;
+    height: 50%;
+    line-height: 120rpx;
+    color: #ccc;
+    font-size: 32rpx;
+    position: absolute;
+    bottom: 0;
+    left: 70rpx;
+}
+/*验证码*/
+.valCode{
+    width: 100%;
+    height: 130rpx;
+    margin-top: 30rpx;
+}
+.valCode label{
+    height: 100%;
+    border: 0;
+    position: relative;
+}
+.valCode label input{
+    display: block;
+    float: left;
+    width: 70%;
+    height: 50%;
+    font-size: 30rpx;
+    border-bottom: 2rpx solid #B2ADCB;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.valCode label view{
+    float: right;
+    text-align: center;
+    width: 20%;
+    height: 80rpx;
+    color: #333;
+    opacity: 1;
+    line-height: 80rpx;
+    margin-bottom: 0;
+    font-size: 34rpx;
+    letter-spacing: 20rpx;
+    font-weight: 600;
+    position: absolute;
+    font-style: italic;
+    background-image: url('/images/valcode.png');
+    background-size: cover;
+    bottom: 0;
+    right: 0;
+    border: 2rpx solid #B2ADCB;
+}
+.notice{
+    width: 100%;
+    height: 30rpx;
+    line-height: 30rpx;
+    text-align: center;
+    font-size: 26rpx;
+    margin-top: 20rpx;
+}
+.sign{
+    display: block;
+    margin-top: 60rpx;
+    width: 100%;
+    height: 80rpx;
+     background: #FE4449;
+     border-radius: 40rpx;
+     line-height: 80rpx;
+     font-size: 36rpx;
+     color: #fff;
+     opacity: 1;
+}
+.toLogin{
+    padding-right: 80rpx;
+    width: 200rpx;
+    height: 60rpx;
+    text-align: right;
+    margin-top: 20rpx;
+    line-height: 60rpx;
+    color: red;
+    font-size: 30rpx;
+}
+
+

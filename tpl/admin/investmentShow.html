@@ -4,73 +4,252 @@
 	<meta charset="UTF-8">
 	<title>人人理财后台管理系统</title>
 	<script type="text/javascript" src="{$JS_PATH}jquery.js"></script>
-	<script type="text/javascript" src="{$JS_PATH}investmentShow.js"></script>
+	<script type="text/javascript" src="{$JS_PATH}investment.js"></script>
 	<script type="text/javascript" src="{$CSS_PATH}bootstrap/dist/js/bootstrap.js"></script>
 	<link rel="stylesheet" href="{$CSS_PATH}bootstrap/dist/css/bootstrap.css"/>
 	<link rel="stylesheet" href="{$CSS_PATH}investmentShow.css"/>
 	<link rel="stylesheet" href="{CSS_PATH}style.css"/>
+	<style>
+		.progressbox{
+			width:300px;
+			height:18px;
+			border:1px solid #aaa;
+			display:none;
+			line-height: 20px;
+			font-size: 16px;
+			margin-top: 20px;
+		}
+		.progress{
+			width:100%;
+			height:100%;
+			background:#BFD3E0;
+		}
+		.img{
+			width:100%;
+			/*height: 100%;*/
+		}
+		.img img{
+			width:50%;
+			height: 50%;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var input = document.getElementsByClassName("file")[0];
+			var progress = document.getElementsByClassName("progress")[0];
+			var img = document.getElementsByTagName("img")[0];
+			var uploadObj = new upload("index.php?m=admin&c=borrow&a=upload",input,progress,img,function(e){
+				var imgurl = document.getElementsByName("imgurl")[0].value = e;
+				alert(e);
+			});
+			uploadObj.up();
+
+		}
+		function upload(url,input,progress,img,callback){
+			if(!url){
+				console.error("url不存在");
+			}
+			this.url = url;
+			this.input = input;
+			this.progress = progress;
+			this.img = img;
+			this.callback = callback;
+			this.type = ["image/jpeg","image/jpg","image/png"];
+			this.size = 1024*1024*100;
+
+		}
+		upload.prototype = {
+			up:function(){
+				var that = this;
+				//事件监听
+				this.input.onchange = function(){
+					that.fileObj = this.files[0];
+					//检测规范
+					if(!that.check()){
+						return false;
+					};
+					// 让相应的控件显示；
+					that.img.parentNode.style.display = "block";
+					that.progress.parentNode.style.display = "block";
+					// 预览文件；
+					that.view();
+					//整合数据；
+					var data = that.getData();
+					// 上传
+					that.ajax(data);
+				}
+			},
+			check:function(){
+				//检测大小；
+				var that = this;
+				if(that.size < that.fileObj.size){
+					alert("文件太大");
+					that.input.value = "";
+					return false;
+				}
+				var flag = true;
+				for (var i = 0; i < that.type.length; i++) {
+					if(that.fileObj.type == that.type[i]){
+						flag = false;
+						break;
+					}
+				};
+				if(flag){
+					alert("文件类型不符");
+					that.input.value = ""
+					return false;
+				}
+				return true;
+			},
+			view:function(){
+				var that = this;
+				var fileread = new FileReader();
+				fileread.readAsDataURL(that.fileObj);
+				fileread.onload = function(e){
+					that.img.src = e.target.result;
+				}
+			},
+			getData:function(){
+				var formdata = new FormData();
+				formdata.append("file",this.fileObj);
+				return formdata;
+			},
+			ajax:function(data){
+				var that = this;
+				var xmlobj = new XMLHttpRequest();
+				xmlobj.upload.onloadstart = function(){
+					that.input.setAttribute("disabled","disabled")
+				}
+				xmlobj.upload.onprogress = function(e){
+					var bili = e.loaded/e.total*100 + "%";
+					that.progress.style.width = bili;
+					that.progress.innerHTML = bili;
+				}
+				xmlobj.onload = function(){
+					that.input.removeAttribute("disabled");
+					that.input.val = "";
+					alert('上传图片成功！');
+					//that.callback(xmlobj.response);
+				}
+				xmlobj.open("post",this.url);
+				xmlobj.send(data)
+			}
+		}
+	</script>
 </head>
 <body>
    <ul id="myTab" class="nav nav-tabs" style="margin-left:10px">
-   <li class="li1 active">
-      <a href="#tag1" data-toggle="tab" style="text-decoration:none">
-        查询项目
-      </a>
-   </li>
+	   <li class="dropdown">
+		   <a href="#" style="text-decoration:none" id="myTabDrop2" class="dropdown-toggle"
+			  data-toggle="dropdown">查询项目
+			   <b class="caret"></b>
+		   </a>
+		   <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+			   <li class="li3-1"><a href="#tag1-1" style="text-decoration:none" tabindex="-1" data-toggle="tab">投标项目</a></li>
+			   <li class="li3-2" onclick=""><a href="#tag1-2" style="text-decoration:none" tabindex="-1" data-toggle="tab">固定投资项目</a></li>
+		   </ul>
+	   </li>
    <li class="li2"><a href="#tag2" style="text-decoration:none" data-toggle="tab">添加项目</a></li>
-   <li class="dropdown">
-      <a href="#" style="text-decoration:none" id="myTabDrop1" class="dropdown-toggle" 
-         data-toggle="dropdown">编辑项目
-         <b class="caret"></b>
-      </a>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-         <li class="li3-1"><a href="#tag3-1" style="text-decoration:none" tabindex="-1" data-toggle="tab">终止项目</a></li>
-         <li class="li3-2"><a href="#tag3-2" style="text-decoration:none" tabindex="-1" data-toggle="tab">项目当前收益</a></li>
-      </ul>
-   </li>
+	<li class="li3"><a href="#tag3" style="text-decoration:none" data-toggle="tab">终止项目</a></li>
 </ul>
-<div id="myTabContent" class="tab-content">
-   <div class="tab-pane fade in active" id="tag1">
-      <div class="panel panel-default" style="width:80%;margin-left:10px;">
-     	<div class="panel-heading" style="font-weight:600">借贷项目汇总</div>
+<div id="myTabContent" class="tab-content" style="width: 1100px;">
+   <div class="tab-pane fade" id="tag1-1">
+      <div class="panel panel-default" style="width:100%;margin-left:10px;">
+     	<div class="panel-heading" style="font-weight:600;color: #333;text-align: center">投标项目汇总</div>
 	    <table class="table">
 		    <tr>
-		    	<th>序号</th>
-		    	<th>名称</th>
-		    	<th>利息</th>
-		    	<th>投资时间</th>
-		    	<th>投资人数</th>
-		    	<th>创建时间</th>
-		    	<th>投资总额</th>
+		    	<th style="text-align: center">序号</th>
+		    	<th style="text-align: center">名称</th>
+				<th style="text-align: center">集资总额</th>
+		    	<th style="text-align: center">利息</th>
+				<th style="text-align: center;">封闭期</th>
+		    	<th style="text-align: center">投资人数</th>
+		    	<th style="text-align: center">创建时间</th>
+				<th style="text-align: center">剩余资金</th>
+				<th style="text-align: center">停标时间</th>
 		    </tr>
-		    <tr>
-		    	<td>1</td>
-		    	<td></td>
-		    	<td></td>
-		    	<td></td>
-		    	<td></td>
-		    	<td></td>
-		    	<td></td>
-		    </tr>
+			{foreach $data01 as $v}
+			<tr>
+			<td style="text-align: center;color: #666;font-size: 18px">
+				{$v['id']}
+			</td>
+			<td style="text-align: center;color: #666;font-size: 18px">
+				{$v['typename']}
+			</td>
+			<td style="text-align: center;color: #666;font-size: 18px">
+				{$v['moneysum']}
+			</td>
+			<td style="text-align: center;color: #666;font-size: 18px">
+				{$v['invest']}
+			</td>
+			<td style="text-align: center;color: #666;font-size: 18px">
+				{$v['timesum']}
+			</td>
+			<td style="text-align: center;color: #666;font-size: 18px">
+				{$v['num']}
+			</td>
+			<td style="text-align: center;color: #666;font-size: 18px">
+				{$v['creatDate']}
+			</td>
+			<td style="text-align: center;color: #666;font-size: 18px">
+				{$v['leftMoney']}
+			</td>
+			<td style="text-align: center;color: #666;font-size: 18px">
+				{$v['stopDate']}
+			</td>
+			</tr>
+			{/foreach}
 	    </table>
      </div>
    </div>
-   <div class="tab-pane fade" id="tag2">
-   	<form class="form-horizontal" id="addBorrow">
+	<div class="tab-pane fade in active" id="tag1-2">
+		<div class="panel panel-default" style="width:100%;margin-left:10px;">
+			<div class="panel-heading" style="font-weight:600;color: #333;text-align: center">固定投资项目汇总</div>
+			<table class="table">
+				<tr>
+					<th style="text-align: center">序号</th>
+					<th style="text-align: center">名称</th>
+					<th style="text-align: center">利息</th>
+					<th style="text-align: center">封闭期</th>
+					<th style="text-align: center">投资人数</th>
+					<th style="text-align: center">目前集资总额</th>
+					<th style="text-align: center">创建时间</th>
+				</tr>
+				{foreach $data02 as $v1}
+				 <tr>
+						<td style="text-align: center;color: #666;font-size: 18px">{$v1['id']}</td>
+						<td style="text-align: center;color: #666;font-size: 18px">{$v1['typename']}</td>
+						<td style="text-align: center;color: #666;font-size: 18px">{$v1['invest']}</td>
+						<td style="text-align: center;color: #666;font-size: 18px">{$v1['timesum']}</td>
+						<td style="text-align: center;color: #666;font-size: 18px">{$v1['num']}</td>
+						<td style="text-align: center;color: #666;font-size: 18px">{$v1['leftMoney']}</td>
+						<td style="text-align: center;color: #666;font-size: 18px">{$v1['creatDate']}</td>
+					</tr>
+					 {/foreach}
+			</table>
+		</div>
+	</div>
+   <div class="tab-pane fade" id="tag2" style="width: 1000px;height: 460px">
+   	<form class="form-horizontal" id="addBorrow" style="position: relative;width: 100%;height: 460px">
    		<h4>添加投资产品</h4>
+		<div style="position: absolute;width: 600px;left: 20px;">
  			<p>
  				<label class="control-label" for="typename" style='font-size:16px;'>项目名称</label>
 				<input type="text" class="input-xlarge" name="typename" id="typename">
  			</p>
- 			
+ 			<p>
+				<label class="control-label"  style='font-size:16px;' >项目类型</label>
+				<label style="margin-left: 20px;"><input class="type" name="type" type="radio" checked value="投标项目" />投标项目 </label>
+				<label><input name="type" class="type" type="radio" value="固定投资项目" />固定投资项目 </label>
+			</p>
 			<p>
-				<label class="control-label" style='font-size:16px' for="timesum">借贷期限</label>
+				<label class="control-label" style='font-size:16px;margin-right: 20px;' for="timesum">封闭期</label>
 				<select id="timesum" name="timesum">
-					<option>1个月</option>
-					<option>2个月</option>
-					<option>3个月</option>
-					<option>6个月</option>
-					<option>12个月</option>
+					<option>30天</option>
+					<option>60天</option>
+					<option>90天</option>
+					<option>180天</option>
+					<option>365天</option>
 				</select>
 			</p>
 			
@@ -86,67 +265,74 @@
 				<label class="control-label" style='font-size:16px' for="invest">月利息值</label>
 				<input type="text" class="input-xlarge" name="invest" id="invest"/>
 			</p>	
+			<p>
+				<label class="control-label" style='font-size:16px' for="pos">项目推荐位</label>
+				<select id="pos" name="pos">
+					<option>轮播</option>
+					<option>首页列表一</option>
+					<option>首页列表二</option>
+					<option>分页列表</option>
+				</select>
+			</p>
+		</div>
+		<div class="loadimg" style="width: 600px;height: 400px; position: absolute;right: 0;top: 100px;">
+				<span style="color:#666;font-size: 20px;">-------------上传轮播图片--------------</span>
+				<br/>
+				<input type="file" id="imgurl" style="font-size: 20px;color: #666" class = "file" multiple name="imgurl"><br>
+				<div class="img">
+					<img src="" alt="">
+				</div>
+				<div class="progressbox">
+					<div class="progress"></div>
+				</div>
+			</div>
 
-		<div class="form-actions" style="margin-top:30px;">
+		<div class="form-actions" style="position: absolute;bottom: 50px;left: 100px">
 			<button type="button" class="btn btn-primary" id="addInvestment">添加</button>
 			
 			<button class="btn"  style="margin-left:40px">取消</button>
 		</div>
     </form>  
    </div>
-   <div class="tab-pane fade" id="tag3-1">
-      <div class="panel panel-default" style="width:90%;margin-left:10px">
-     	<div class="panel-heading" style="font-weight:600">终止借贷项目</div>
-	    <table class="table" id="table2">
+   <div class="tab-pane fade" id="tag3" style="width: 1000px;margin-left: 20px">
+	    <table class="table" id="table2" style="margin-top: 20px;border:1px solid #ccc">
 		    <tr>
 		    	<th style='text-align:center'>序号</th>
+				<th style='text-align:center'>类型</th>
 		    	<th style='text-align:center'>名称</th>
-		    	<th style='text-align:center'>利息</th>
+				<th style='text-align:center'>利息</th>
 		    	<th style='text-align:center'>期数</th>
-		    	<th style='text-align:center'>投资总额</th>
-		    	<th style='text-align:center'>起步价</th>
-		    	<th style='text-align:center'>创建人</th>
+				<th style='text-align:center'>创建时间</th>
 		    	<th style='text-align:center'>操作</th>
 		    </tr>
-			{foreach $data as $v}
-			   <tr>
-			   	  <td style='text-align:center'>
-			   	  	{$v['id']}
-			   	  </td>
-			   	  <td style='text-align:center'>
-			   	  	{$v['typename']}
-			   	  </td>	
-			   	  <td style='text-align:center'>
-			   	  	{$v['invest']}
-			   	  </td>	
-			   	  <td style='text-align:center'>
-			   	  	{$v['timesum']}
-			   	  </td>
-			   	  <td style='text-align:center'>
-			   	  	{$v['moneysum']}
-			   	  </td>
-			   	  <td style='text-align:center'>
-			   	  	{$v['minmoney']}
-			   	  </td>
-			   	  <td style='text-align:center'>
-			   	  	{$v['auser']}
-			   	  </td>
-			   	  <td>
-			   	  	<button class='btn byn-danger cancle'>删除</button>
-			   	  	<input type="hidden" value={$v['id']}/>
-			   	  </td>
-			   </tr>
+			{foreach $data01 as $v}
+				<tr>
+					<td style="text-align: center;font-size: 18px;color: #666;">{$v['id']}</td>
+					<td style="text-align: center;font-size: 18px;color: #666">{$v['type'] }</td>
+					<td style="text-align: center;font-size: 18px;color: #666">{$v['typename']}</td>
+					<td style="text-align: center;font-size: 18px;color: #666">{$v['invest']}</td>
+					<td style="text-align: center;font-size: 18px;color: #666">{$v['timesum']}</td>
+					<td style="text-align: center;font-size: 18px;color: #666">{$v['creatDate']}</td>
+					<td style="text-align: center">
+					<button class='btn btn-danger cancle' name="{$v['id']}">停止</button>
+					<input type="hidden" value={$v['id']}/>
+					</td>
+				</tr>
+			{/foreach}
+			{foreach $data02 as $v}
+				<tr>
+					<td style="text-align: center">{$v['id']}</td>
+					<td style="text-align: center">{$v['type'] }</td>
+					<td style="text-align: center">{$v['typename']}</td>
+					<td style="text-align: center">{$v['invest']}</td>
+					<td style="text-align: center">{$v['timesum']}</td>
+					<td style="text-align: center">{$v['creatDate']}</td>
+					<td style="text-align: center">
+					<button class='btn btn-danger cancle ' name="{$v['id']}">停止</button>
+					</td>
+				</tr>
 			{/foreach}
 	    </table>
-
-      </div>
-   </div>
-   <div class="tab-pane fade" id="tag3-2">
-      <p>Enterprise Java Beans (EJB) is a development architecture 
-         for building highly scalable and robust enterprise level    
-         applications to be deployed on J2EE compliant 
-         Application Server such as JBOSS, Web Logic etc.
-      </p>
    </div>
 </div>
 </body>

@@ -1,0 +1,78 @@
+.swiper01{
+    width: 100%;
+    height: 400rpx;
+}
+.bannerSon01{
+    background: #F74A4D;
+    width: 100%;
+    height: 160rpx;
+    padding-left: 20rpx;
+    padding-top: 30rpx;
+}
+.bannerSon01 text{
+    color: #fff;
+}
+.bannerSon01 text:nth-child(1){
+    font-size: 32rpx;
+}
+.bannerSon01 text:nth-child(2){
+    margin-top: 30rpx;
+    display: block;
+    font-size: 48rpx;
+}
+.bannerSon02{
+    background: #F75C5F;
+    width: 100%;
+    height: 120rpx;
+}
+.bannerSon02 text{
+    color: #fff;
+}
+.bannerSon02 view{
+    float: left;
+    text-align: center;
+}
+.canPreInvest{
+    width: 50%;
+    height: 100%;
+    padding-top: 10rpx;
+}
+.canPreInvest text:nth-child(1){
+    display: block;
+    font-size: 28rpx;
+    margin-bottom: 20rpx;
+}
+.preInvest{
+    width: 50%;
+    height: 100%;
+    padding-top: 10rpx;
+}
+.preInvest text:nth-child(1){
+    display: block;
+    font-size: 28rpx;
+    margin-bottom: 20rpx;
+}
+/*下面的选项卡*/
+.swiper02{
+    width: 100%;
+    height: 860rpx;
+}
+.swiper-tab{
+    width: 100%;
+    height: 90rpx;
+    text-align: center;
+    line-height: 86rpx;
+    border: 2rpx solid #ccc;
+}
+.swiper-tab-item{
+    display: inline-block;
+    width: 50%;
+    color:#666;
+}
+.swiper-tab-item i{
+    font-size: 40rpx;
+}
+.active{
+    color:#F74A4D;
+    border-bottom: 4rpx solid #F74A4D;
+}

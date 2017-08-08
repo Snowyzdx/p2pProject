@@ -1,0 +1,44 @@
+<view class="banner">
+    <view class="title">还款计划
+    </view>
+    <view class="head">
+        <view class="sum">借款金额（元）</view>
+        <view class="noReturned">待还金额</view>
+        <view class="classname">期数</view>
+    </view>
+    <view class="headtr">
+        <view class="td">
+            1814.00
+        </view>
+        <view class="td">
+            997.80
+        </view>
+        <view class="td">
+            7/12
+        </view>
+    </view>
+</view>
+<view class="returnList">
+<view class="th">
+    <view class="td">还款日</view>
+    <view class="td">应还金额</view>
+    <view class="td">状态</view>
+</view>
+<scroll-view id="list" scroll-y="true">
+    <view class="tr">
+        <view class="td">2017.12.12</view>
+        <view class="td">166.3</view>
+        <view class="td">已还清</view>
+    </view>
+     <view class="tr">
+        <view class="td">2017.12.12</view>
+        <view class="td">166.3</view>
+        <view class="td">已还清</view>
+    </view>
+     <view class="tr">
+        <view class="td">2017.12.12</view>
+        <view class="td">166.3</view>
+        <view class="td">已还清</view>
+    </view>
+</scroll-view>
+</view>

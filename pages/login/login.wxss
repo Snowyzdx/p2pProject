@@ -1,0 +1,103 @@
+/* pages/login/login.wxss */
+page{
+    height: 100%;
+   background-image: url("/images/loginbk.png");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: bottom;
+}
+#mainContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    background: #030012;
+    opacity: 0.8;
+}
+/*头像*/
+.toux{
+    width: 220rpx;
+    height: 220rpx;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 100rpx;
+    background-position: center;
+    background-size: cover;
+}
+/*登录表单*/
+form{
+    width: 90%;
+    margin-top: 80rpx;
+    position: relative;
+}
+.tr{
+    width: 100%;
+    height: 80rpx;
+    margin-bottom: 40rpx;
+    line-height: 80rpx;
+    border-bottom: 2rpx solid #B2ADCB;
+    position: relative;
+}
+.tr i{
+    display: block;
+    float: left;
+    width: 60rpx;
+    height: 60rpx;
+    font-size: 40rpx;
+    color: #fff;
+    margin-right: 10rpx;
+}
+.tr input{
+    display: block;
+    float: left;
+    width: 80%;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #ccc;
+    font-size: 32rpx;
+    position: absolute;
+    bottom: 0;
+    left: 70rpx;
+}
+.login{
+    display: block;
+    margin-top: 60rpx;
+    width: 100%;
+    height: 80rpx;
+     background: #FE4449;
+     border-radius: 40rpx;
+     line-height: 80rpx;
+     font-size: 36rpx;
+     color: #fff;
+     opacity: 1;
+     border-bottom: 0;
+}
+#footer{
+    width: 90%;
+    height: 40rpx;
+    margin: 0 auto;
+    margin-top: 20rpx;
+    position: relative;
+     font-size: 30rpx;
+}
+.toRegist{
+    float: right;
+    height: 100%;
+    line-height: 40rpx;
+}
+
+.toRegist text:nth-child(1){
+    color: #fff;
+}
+.toRegist text:nth-child(2){
+    color: red;
+    text-decoration: underline;
+}
+.getPassword{
+    float: left;
+    height: 100%;
+    line-height: 40rpx;
+    color: red;
+    border-bottom: 2rpx solid red;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>人人理财后台管理系统</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>投资人账号</th>
+            <th>投资金额</th>
+            <th>投资信息详情</th>
+        </tr>
+        {foreach $data as $v}
+            <tr>
+                <td>{$v['username']}</td>
+                <td>{$v['sum']}</td>
+                <td><a href="index.php?m=admin&c=investment&">详情</a></td>
+            </tr>
+        {/foreach}
+    </table>
+    {foreach $data as $v}
+
+    {/foreach}
+</body>
+</html>

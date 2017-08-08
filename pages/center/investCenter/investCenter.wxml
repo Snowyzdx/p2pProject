@@ -1,0 +1,50 @@
+<!--轮播-->
+<swiper indicator-dots="true" indicator-color="#fff" indicator-active-color="#ccc" autoplay="">
+    <swiper-item class="swiper01">
+        <view class="bannerSon01">
+            <text>持有中投资本金（元）</text>
+            <text>0.00</text>
+        </view>
+    <view class="bannerSon02">
+        <view class="canPreInvest">
+            <text>可预期收益（元）</text>
+            <text>0.00</text>
+        </view>
+        <view class="preInvest">
+            <text>预计到期总收益（元）</text>
+            <text>0.00</text>
+         </view>
+    </view>
+    </swiper-item>
+    <swiper-item class="swiper01">
+        <view class="bannerSon01">
+            <text>历史总投入（元）</text>
+            <text>0.00</text>
+        </view>
+    <view class="bannerSon02">
+        <view class="canPreInvest">
+            <text>历史已赚取收益（元）</text>
+            <text>0.00</text>
+        </view>
+        <view class="preInvest">
+            <text>平均投资期限（元）</text>
+            <text>0.00</text>
+         </view>
+    </view>
+    </swiper-item>
+</swiper>
+<!--选项卡-->
+<view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+    持有中
+</view>
+<view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+       已退出
+    </view>
+</view>
+<swiper class="swiper02" current="{{currentTab}}" duration="300"  bindchange="swiperTab">
+    <swiper-item>1
+    </swiper-item>
+    <swiper-item>2
+    </swiper-item>
+</swiper>   

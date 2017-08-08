@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="{$JS_PATH}jquery.js"></script>
+    <script type="text/javascript" src="{$CSS_PATH}bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="{$CSS_PATH}bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="{CSS_PATH}style.css"/>
+    <title>人人理财后台管理系统</title>
+    <script>
+        $(function(){
+            $(".pass").click(function(){
+                var id=$(this).attr('name');
+                var data={
+                    id:id
+               };
+                $.ajax({
+                    url:'index.php?m=admin&c=borrow&a=pass',
+                    type:'post',
+                    data:data,
+                    success:function(e){
+                        alert(e);
+                    }
+                })
+            });
+            $(".nopass").click(function(){
+                var id=$(this).attr('name');
+                var data={
+                    id:id
+                };
+                $.ajax({
+                    url:'index.php?m=admin&c=borrow&a=nopass',
+                    type:'post',
+                    data:data,
+                    success:function(e){
+                        alert(e);
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<table class="table" id="table2" style="width: 1100px;border: 1px solid #ccc;margin-left: 20px;margin-top: 20px">
+    <tr>
+        <th style='text-align:center'>序号</th>
+        <th style='text-align:center'>账号</th>
+        <th style='text-align:center'>申请贷款详情</th>
+        <th style='text-align:center'>申请人贷款信息</th>
+        <th style="text-align:center">操作</th>
+    </tr>
+    {foreach $data as $v}
+    <tr>
+        <td style='text-align:center;font-size: 18px'>{{$v['id']}}</td>
+        <td style='text-align:center;font-size: 18px;'>{{$v['username']}}</td>
+        <td style='text-align:center;font-size: 18px;'><a href="index.php?m=admin&c=borrow&a=showTologanDetail&username={{$v['username']}}&typecode={{$v['typeCode']}}" target="iframe">详情</a></td>
+        <td style='text-align:center;font-size: 18px;'><a href="index.php?m=admin&c=borrow&a=showMsgDetail&username={{$v['username']}}" target="iframe">详情</a></td>
+        <td style='text-align:center;font-size: 18px;'><button class='btn btn-danger pass' name="{$v['id']}">通过</button><button class='btn cancle nopass' name="{$v['id']}" style="margin-left: 20px;">不通过</button></td>
+    </tr>
+    {/foreach}
+</table>
+</body>
+</html>

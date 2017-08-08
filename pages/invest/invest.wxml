@@ -1,0 +1,70 @@
+<scroll-view scroll-y="true">
+    <view class="safety">
+        icon 即往预期收益率100%达成
+    </view>
+    <view id="investProjects">
+        <view class="project">
+            <view class="header">
+                <text>季账户</text>
+                <text>保险</text>
+                <text>0人次</text>
+            </view>
+            <view class="con">
+                <text>3.0%</text>
+                <text>封闭期3个月</text>
+                <text>立即抢购</text>
+            </view>
+        </view>
+        <view class="project">
+            <view class="header">
+                <text>年账户</text>
+                <text>保险</text>
+                <text>1人次</text>
+            </view>
+            <view class="con">
+                <text>4.0%</text>
+                <text>封闭期12个月</text>
+                <text>立即抢购</text>
+            </view>
+        </view>
+        <view class="project">
+            <view class="header">
+                <text>季账户</text>
+                <text>保险</text>
+                <text>0人次</text>
+            </view>
+            <view class="con">
+                <text>6.0%</text>
+                <text>封闭期3个月</text>
+                <text>立即抢购</text>
+            </view>
+        </view>
+        <view class="project">
+            <view class="header">
+                <text>季账户3个月</text>
+                <text>保险</text>
+                <text>1人次</text>
+            </view>
+            <view class="con">
+                <text>2.0%</text>
+                <text>封闭期3个月</text>
+                <text>立即抢购</text>
+            </view>
+        </view>
+       <view class="project">
+            <view class="header">
+                <text>季账户3个月</text>
+                <text>保险</text>
+                <text>233093人次</text>
+            </view>
+            <view class="con">
+                <text>3.0%</text>
+                <text>封闭期3个月</text>
+                <text>立即抢购</text>
+            </view>
+        </view>
+    </view>
+    <view id="footer">
+        预期收益非平台承诺收益，市场有风险，投资需谨慎
+    </view>
+</scroll-view>

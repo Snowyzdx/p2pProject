@@ -1,0 +1,388 @@
+page{
+    background: #ECF0F3;
+}
+#mainContainer{
+     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+#header{
+    width: 100%;
+    text-align: left;
+    padding-left: 20rpx;
+    color: #666;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 30rpx;
+    background: #fff;
+}
+/*banner*/
+.banner{
+    width: 100%;
+    height: 240rpx;
+    padding-top: 40rpx;
+    border-bottom: 2rpx solid #eee;
+    background: #fff;
+}
+.invest{
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-size: 66rpx;
+    font-weight: 600;
+    margin-bottom: 10rpx;
+}
+.banner view:nth-child(2){
+    width: 100%;
+    text-align: center;
+    color: #9E9284;
+    font-size: 34rpx;
+}
+.leftMoney{
+    width: 100%;
+    margin-top: 60rpx;
+    color: #555;
+    font-size: 30rpx;
+    text-align: center;
+}
+/*bar*/
+.bar{
+    width: 100%;
+    height: 120rpx;
+    background: #fff;
+}
+.bar view{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    float: left;
+    padding: 20rpx 0;
+}
+.timesum{
+   box-sizing: border-box;  
+   border-right: 2rpx solid #eee
+}
+.bar view text{
+    display: block;
+}
+.bar view text:nth-child(1){
+    font-size: 40rpx;
+    font-weight: 600;
+    color: #666;
+}
+.bar view text:nth-child(2){
+    font-size: 26rpx;
+    color: #666;
+}
+.investMoney{
+    margin:20rpx 0;
+    height: 100rpx;
+    line-height: 100rpx;
+    background: #fff;
+    width: 100%;
+}
+.investMoney text:nth-child(1){
+    display: inline-block;
+    width: 140rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+    text-align: center;
+    color: #FF5A56;
+    border: 2rpx solid #FF5A56;
+    font-size: 26rpx;
+    border-radius: 20rpx 8rpx 20rpx 8rpx;
+    margin-left: 20rpx;  
+}
+.investMoney text:nth-child(2){
+    display: inline-block;
+    height: 100%;
+    margin-left: 20rpx;
+    line-height: 100rpx;
+    font-size: 30rpx;
+    color: #333;
+}
+/*投资日期说明*/
+.dateState{
+    width: 100%;
+    height: 220rpx;
+    background: #fff;
+    padding: 20rpx 30rpx;
+    text-align: center;
+    box-sizing: border-box;
+}
+.dateState .first{
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 36rpx;
+    color: #333;
+}
+.dateState .first text{
+    display: block;
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+.dateState .second{
+    width: 100%;
+    height: 40rpx;
+    line-height: 40rpx;
+    color: #24A8CC;
+}
+.dateState .third{
+    width: 100%;
+    height: 40rpx;
+    line-height: 40rpx;
+    margin-top: 10rpx;
+}
+.dateState .third text{
+    display: block;
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    color: #fff;
+    line-height: 40rpx;
+    font-size: 32rpx;
+}
+.dateState .third text:nth-child(1){
+    background: #C8C4BD;
+}
+.dateState .third text:nth-child(2){
+    background: #24A8CC;
+}
+/*累计人次*/
+.personNum{
+    width: 100%;
+    height: 90rpx;
+    background: #fff;
+    margin-top: 20rpx;
+    line-height: 90rpx;
+    font-size: 32rpx;
+    color: #333;
+    padding-left: 40rpx;
+}
+.personNum text{
+    color: red;
+}
+/*安全保障*/
+.safe{
+    width: 100%;
+    background: #fff;
+    height: 300rpx;
+    margin-top: 20rpx;
+    color: #333;
+    font-size: 32rpx;
+}
+.safe .title{
+    float: left;
+    height: 80rpx;
+    width: 100%;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    line-height: 80rpx;
+    border-bottom: 2rpx solid #E0D8D1;
+    font-weight: 600;
+}
+.safe .title i{
+    display: block;
+    float: right;
+    font-size: 30rpx;
+    color: #333;
+}
+.safeCon{
+    width: 100%;
+    height: 220rpx;
+    margin-top: 80rpx;
+}
+.safeCon view{
+    width: 100%;
+    height: 110rpx;
+    line-height: 110rpx;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+.safeCon view i{
+    display:block;
+    float: left;
+    color: #8BD252;
+    font-size: 40rpx;
+}
+.safeCon view text{
+    display: block;
+    float: right;
+    color: #666;
+    font-size: 30rpx;
+}
+/*产品详情*/
+.projectDetail{
+    width: 100%;
+    background: #fff;
+    margin-top: 20rpx;
+    color: #333;
+    font-size: 32rpx;
+    padding-left: 40rpx;
+    padding-bottom: 20rpx;
+}
+.projectDetail .title{
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-weight: 600;
+    padding-left: 30rpx;
+}
+.projectDetail text{
+    width: 100%;
+    display: block;
+    padding: 10rpx;
+    box-sizing: border-box;
+    color: #666;
+    line-height: 60rpx;
+}
+/*更多*/
+.more{
+    width: 100%;
+    background: #fff;
+    margin-top: 20rpx;
+}
+.tag{
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 36rpx;
+    color: #555;
+    box-sizing: border-box;
+    padding:0 30rpx;
+    border-bottom: 2rpx solid #E0D8D1;
+
+}
+.tag text{
+    display: block;
+    float: left;
+    color: #333;
+    font-size: 30rpx;
+    font-weight: 600;
+}
+.tag view{
+    float: right;
+    font-size: 30rpx;
+    color: #666;
+}
+.tag view .see{
+    color: #666;
+    font-size: 28rpx;
+}
+.tag view i{
+    color: #333;
+    font-size: 30rpx;
+}
+.more .tag:nth-child(3){
+    border: 0;
+}
+/*space*/
+.space{
+    width: 100%;
+    height: 100rpx;
+}
+/*footer*/
+.footer{
+    width:100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    color: #666;
+    font-size: 26rpx;
+    text-align: center; 
+    margin-top: 20rpx;
+}
+/*立即参与*/
+.join{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #fff;
+    text-align: center;
+    font-size: 32rpx;
+    font-weight: 600;
+    background: #FF5A56;
+}
+/*投资表单*/
+.hideCon{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -750rpx;
+}
+.hideTop{
+    width: 100%;
+    height: 75%;
+    background: #000;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 25%;
+}
+.investForm{
+    width: 100%;
+    height: 25%;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+    padding-top: 20rpx;
+    color: #333;
+    font-size: 30rpx;
+    font-weight: 600;
+}
+.investForm .first{
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding-left: 20rpx;
+}
+.investForm .first text{
+    display: block;
+    float: left;
+}
+.investForm .first text:nth-child(1){
+    margin-right: 40rpx;
+}
+.investForm .second{
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding-right: 20rpx;
+    padding-left: 20rpx;
+}
+.investForm .third{
+    width: 100%;
+    height: 140rpx;
+    line-height: 140rpx;
+    position: absolute;
+    bottom: 0;
+    background: #F5F5F5;
+}
+.investForm .third input{
+    display: block;
+    float: left;
+    width: 500rpx;
+    height: 100rpx;
+    margin-top: 40rpx;
+    color: #999;
+    font-size: 30rpx;
+    padding-left: 20rpx;
+}
+.investForm .third button{
+    display: block;
+    float: right;
+    width: 200rpx;
+    height: 80%;
+    margin-right: 30rpx;
+    margin-top: 20rpx;
+    background: #FF5A56;
+    color: #fff;
+}

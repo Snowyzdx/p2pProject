@@ -37,11 +37,15 @@ header("Content-Type:text/html;charset=utf-8");
 		return(isset($_GET['a'])&&!empty($_GET['a'])?$_GET['a']:"index");
 	}
 	 function getP(){
+		 $username=isset($_GET['username'])?$_GET['username']:"";
+		 $typecode=isset($_GET['typecode'])?$_GET['typecode']:"";
 		 $id=isset($_GET['id'])?$_GET['id']:"";
 		 $cid=isset($_GET['cid'])?$_GET['cid']:"";
 		 $userid=isset($_GET['userid'])?$_GET['userid']:"";
 		 $posid=isset($_GET['posid'])?$_GET['posid']:"";
 		 return array(
+		 	 "typecode"=>$typecode,
+		 	 "username"=>$username,
 			 "id"=>$id,
 			 "cid"=>$cid,
 			 "userid"=>$userid,

@@ -1,0 +1,26 @@
+<view id="mainContainer">
+<view class="toux" style="background-image: url('{{touxUrl}}')">
+
+</view>
+  <form bindsubmit="login">
+  <!--用户名-->
+    <view class="tr username">
+       <i class="iconfont icon-yonghuming"></i>
+       <input type="number" bindblur="getUsername">{{username}}</input>
+    </view>
+<!--密码-->
+<view class="tr password">
+    <i class="iconfont icon-mima"></i>
+    <input  password="true" bindblur="getPassword">{{password}}</input>
+</view>
+<!--登录按钮-->
+<button class="tr login" form-type="submit" >登  陆</button>
+  </form>
+  <view id="footer">
+    <view class="toRegist" bindtap="toRegist">
+        <text>还没有注册？</text>
+        <text bindtap="toRegist">注册</text>
+    </view>
+    <view class="getPassword" bindtap="findPws">忘记密码?</view>
+  </view>
+</view>

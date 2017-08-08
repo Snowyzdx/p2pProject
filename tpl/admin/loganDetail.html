@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>人人理财后台管理系统</title>
+</head>
+<body>
+<div id="mian" style="width: 600px;border: 1px solid #666; height: 300px;margin-left: 200px;box-sizing:border-box;padding-left:20px;padding-right:20px;margin-top: 100px">
+   <h4 style="display: block;width: 100%;text-align: center">申请借贷详情信息</h4>
+    {{foreach $data as $v}}
+    <p>
+        <span style="font-weight: 600;color: #333">申请额度:</span>
+        <span>{{$v['sum']}}</span>
+    </p>
+    <p>
+        <span style="font-weight: 600;color: #333">申请期限:</span>
+        <span>{{$v['time']}}</span>
+    </p>
+    {{/foreach}}
+    {{foreach $data01 as $v1}}
+        <p>
+            <span style="font-weight: 600;color: #333">贷款利息:</span>
+            <span>{{$v1['invest']}}</span>
+        </p>
+    <p>
+        <span style="font-weight: 600;color: #333">服务费:</span>
+        <span>{{$v1['saverFeed']}}</span>
+    </p>
+    {{/foreach}}
+</div>
+</body>
+</html>

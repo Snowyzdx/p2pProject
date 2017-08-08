@@ -1,0 +1,56 @@
+.banner{
+    width: 100%;
+    height: 300rpx;
+    background-image: url('/images/font/loganBanner.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.menue{
+    position: relative;
+    width:100%;
+    height:80rpx;
+    line-height: 80rpx;
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    border-bottom: 2rpx solid #00C2AA;
+}
+.menue text{
+    display: block;
+    float: left;
+    color: #6F6F6F;
+    font-size: 32rpx;
+}
+.menue i{
+    color: #6F6F6F;
+    font-size: 32rpx;
+    display: block;
+    float: right;
+}
+.con{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20rpx 30rpx;
+}
+.select{
+    margin-top:-10rpx;
+    width: 100%;
+    color: #666;
+    font-size: 28rpx;
+}
+.select text{
+    color: #666;
+    font-size: 28rpx;
+}
+.con{
+    background: #F5F2F2;
+}
+/*立即申请*/
+.sub{
+    width: 80%;
+    height: 80rpx;
+    background: #00C2AA;
+    color: #fff;
+    line-height: 80rpx;
+    margin-top: 40rpx;
+}

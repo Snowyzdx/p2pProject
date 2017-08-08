@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/regist/regist",
+    "pages/login/login",
+    "pages/start/start",
+    "pages/index/index",
+    "pages/logan/logan",
+     "pages/invest/invest",
+     "pages/logan/logan-detail/logan-detail",
+     "pages/invest/invest-detail/invest-detail",
+     "pages/logan/loganMsg/loganMsg",
+     "pages/logan/confirmPage/confirmPage",
+    "pages/invest/confirmPage/confirmPage",
+    "pages/center/set/resetPws/resetPws",
+    "pages/center/set/personMsg/personMsg",
+    "pages/center/set/set",
+    "pages/center/center",
+     "pages/news/news",
+     "pages/news/show/show",
+     "pages/center/loganCenter/loganCenter",
+     "pages/center/loganCenter/loganCenter",
+      "pages/center/loganCenter/loganPlan/loganPlan",
+     "pages/center/loganCenter/returnedLogan/returnedLogan",
+     "pages/center/money/money",
+     "pages/center/loganCenter/loganDetail/loganDetail",
+     "pages/center/loganCenter/returnMoney/returnMoney",
+     "pages/center/money/tixian/tixian",
+     "pages/center/money/zijin/ijin",
+     "pages/center/money/moneyDetail/moneyDetail",
+     "pages/center/investCenter/investCenter",
+     "pages/invest/safe/safe",
+     "pages/invest/moneyFloat/moneyFloat",
+     "pages/invest/agreement/agreement"
+  ],
+  "window": {
+        "navigationBarBackgroundColor": "#fff"
+    },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath":"pages/index/index",
+        "text":"精选",
+        "iconPath":"images/tag02.png",
+        "selectedIconPath":"images/tag02-act.png"
+      },
+      {
+      "pagePath": "pages/invest/invest",
+      "text": "投标",
+      "iconPath":"images/tag01.png",
+      "selectedIconPath":"images/tag01-act.png"
+    },
+    {
+      "pagePath":"pages/logan/logan",
+      "text":"贷款",
+      "iconPath":"/images/tag05.png",
+      "selectedIconPath":"/images/tag05-act.png"
+    },
+     {
+      "pagePath":"pages/center/center",
+      "text":"我的",
+      "iconPath":"/images/tag03.png",
+      "selectedIconPath":"/images/tag03-act.png"
+    }
+    ]
+  }
+}

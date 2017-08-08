@@ -1,0 +1,26 @@
+<view class="title">银行卡充值</view>
+<view id="chongzhiForm">
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio">
+        <radio/>中国农业银行
+        <text>单笔限额150000元，每日限额200000</text>
+        </label>
+</radio-group>
+<view class="jine">
+    <label>充值金额</label><input value="输入充值金额" maxlength="6" type="number" bindblur="validateChongzhi"/><text>￥</text>
+</view>
+<view class="serve">
+    <label>手续费</label>
+    <input type="digit" value="0" disabled="true"/>￥
+</view>
+<view class="shiji">
+    <label>实际扣款</label>
+    <input type="number" value="0" disabled="true" />￥
+</view>
+<view class="tixing">
+    <label>请确保充值金额足够，避免造成还款失败</label>
+</view>
+<button id="sub" form-type="submit">充值</button>
+</form>
+</view>

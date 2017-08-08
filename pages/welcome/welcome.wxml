@@ -1,0 +1,12 @@
+<view class="container">
+  <swiper>
+    <swiper-item style="background-image:url('/images/font/yd01.png')">
+    </swiper-item>
+    <swiper-item style="background-image:url('/images/font/yd02.png')">
+    </swiper-item>
+    <swiper-item style="background-image:url('/images/font/yd03.png')">
+      <view class="btn" bindtap="onTap">
+      </view>
+    </swiper-item>
+    </swiper>
+</view>

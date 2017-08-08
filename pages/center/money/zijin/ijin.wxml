@@ -1,0 +1,36 @@
+<page>
+    <view class="mainContainer">
+    <!--我的资金-->
+        <view class="myMoney">
+           <view>
+              <i class="iconfont icon-34"></i>  
+              <text>我的资金</text>
+            </view>
+            <view>
+                <text bindtap="chongzhi">充值</text>
+                <text bindtap="tixian">提现</text>
+            </view>
+        </view>
+        <!--资金流动-->
+        <view class="trans">
+          <view style="width:100%;height:80rpx;">
+              <view class="transLeft">
+                <i class="iconfont icon-zhuanrangzhuanqu" style="color:#EE1919;font-size:30rpx;"></i>
+                资金流动
+              </view>
+             <view class="transRight" bindtap="moneyDetail">       
+                明细
+                <i class="iconfont icon-youjiantou" style="color:#EE1919;font-size:24rpx;"></i>
+            </view>
+        </view> 
+        <view class="notice">
+            *提现到银行卡1-3个工作日到账（节假日顺延)，客服电话：010-59715450
+        </view>
+        </view>
+
+    </view>
+    <view class="footer">
+     <i class="iconfont icon-anquan" style="color:#49CB5F; font-size:32rpx;"></i>
+     太平洋q保险公司
+    </view>
+</page>

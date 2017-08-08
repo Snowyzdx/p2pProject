@@ -1,10 +1,13 @@
+
 #addBorrow{
-	width: 80%;
+	width: 100%;
 	border: 1px solid #ccc;
 	margin-left: 20px;
 	padding-left: 50px;
 	padding-bottom: 30px;
 	margin-top:10px;
+	background: red;
+	position: relative;
 }
 #addBorrow h4{
 	width: 100%;
@@ -39,3 +42,4 @@
 #table2 th{
  text-align: center;
 }
+

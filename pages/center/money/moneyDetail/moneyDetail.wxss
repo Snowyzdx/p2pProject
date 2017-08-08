@@ -1,0 +1,75 @@
+/* pages/center/money/moneyDetail/moneyDetail.wxss */
+.swiper-tab{
+    width: 100%;
+    height: 90rpx;
+    text-align: center;
+    line-height: 84rpx;
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    border-bottom: 2rpx solid #ccc;
+    border-top: 2rpx solid #ccc;
+}
+.swiper-tab-item{
+    display: inline-block;
+    width: 33.33%;
+    color:#666;
+}
+.swiper-tab-item i{
+    font-size: 40rpx;
+}
+.active{
+    color:#EE1919;
+    border-bottom: 4rpx solid #EE1919;
+}
+swiper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90rpx;
+}
+/*资金明细列表*/
+swiper scroll-view{
+    width: 100%;
+    height: 100%;
+}
+swiper scroll-view .myMoneyList{
+    width: 100%;
+    height: 120rpx;
+    border-bottom: 2rpx solid #ccc;
+    padding-left:20rpx;
+    position: relative;
+}
+.transTitle{
+    position: absolute;
+    left: 20rpx;
+    top: 20rpx;
+    width: 100rpx;
+    height: 40rpx;
+    font-size: 32rpx;
+    color: #666;
+    font-weight: 600;
+}
+.yue{
+    position: absolute;
+    left: 20rpx;
+    bottom: 10rpx;
+    width: 200rpx;
+    height: 40rpx;
+    font-size: 28rpx;
+    color: #666;
+}
+.transTime{
+    position: absolute;
+    right: 50rpx;
+    top: 16rpx;
+    font-size: 28rpx;
+    color: #666;
+}
+.transMoney{
+    position: absolute;
+    right: 50rpx;
+    bottom: 10rpx;
+}

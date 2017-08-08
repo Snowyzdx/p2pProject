@@ -1,0 +1,211 @@
+.swiper-tab{
+    width: 100%;
+    height: 90rpx;
+    text-align: center;
+    line-height: 74rpx;
+    position: absolute;
+    bottom: 0;
+    border: 2rpx solid #ccc;
+}
+.swiper-tab-item{
+    display: inline-block;
+    width: 50%;
+    color:#666;
+}
+.swiper-tab-item i{
+    font-size: 40rpx;
+}
+.active{
+    color:#05B8FF;
+    border-bottom: 4rpx solid #05B8FF;
+}
+/*额度*/
+#edu{
+    width: 96%;
+    height: 360rpx;
+    margin: 0 auto;
+    margin-top: 60rpx;
+    text-align: center;
+    position: relative;
+    box-shadow:0rpx 0rpx 30rpx #cfcfcf;
+    background: #fff;
+    border-radius: 2%;
+}
+.tiedu{
+    font-size: 30rpx;
+    display: block;
+    position: absolute;
+    width: 200rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 40rpx;
+    right:0rpx;
+    top: 8rpx;
+    color: #05B8FF;
+}
+.tiedu i{
+    font-size: 26rpx;
+    color: #05B8FF;
+}
+#edu .text01{
+  position: absolute;
+  top: 80rpx;
+  left: 0;
+  right: 0;
+  font-size: 30rpx;
+  color: #747167;
+}
+#edu .text02{
+    position: absolute;
+  top: 200rpx;
+  left: 0;
+  right: 0;
+  font-size: 30rpx;
+  color: #747167;
+}
+#edu .text03{
+    position: absolute;
+    top: 130rpx;
+    left: 0;
+  right: 0;
+   font-size: 50rpx;
+   color: #333;
+  font-weight: 600;
+}
+#edu .toLogan{
+    width: 100%;
+    height: 80rpx;
+    position: absolute;
+    bottom: 0;
+    background: #05B8FF;
+    color: #fff;
+    line-height: 80rpx;
+    border-radius: 2%;
+}
+/*还款计划*/
+#returnNowList{
+    width: 100%;
+    height: 90%;
+}
+#plan{
+    width: 96%;
+    margin: 0 auto;
+    margin-top: 20rpx;
+    box-shadow:0rpx 0rpx 30rpx #cfcfcf;
+    background: #fff;
+    border-radius: 2%;
+    position: relative;
+    height: 56%;
+}
+.returnPlan{
+    font-size: 30rpx;
+    display: block;
+    position: absolute;
+    width: 200rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 40rpx;
+    right:0rpx;
+    top: 8rpx;
+    color: #05B8FF;
+}
+.returnPlan i{
+    font-size: 26rpx;
+    color: #05B8FF;
+}
+#returnNowList{
+    width: 100%;
+    position: absolute;
+    top: 66rpx;
+}
+.returnNowItem{
+    width: 100%;
+    height: 100rpx;
+    margin-top: 60rpx;
+}
+.returnNowItem view{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.returnNowItem view:nth-child(1){
+    box-sizing: border-box;
+    border-right: 2rpx solid #DBDBDB;
+}
+.returnNowItem .retrunMoney{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+.returnNowItem .retrunMoney text:nth-child(1){
+    display: block;
+    font-size: 26rpx;
+    color: #747167; 
+}
+.returnNowItem .retrunMoney text:nth-child(2){
+    display: block;
+    font-size: 40rpx;
+    color: #333;
+    margin-top: 20rpx;
+}
+.returnNowItem .time{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+.returnNowItem .time text:nth-child(1){
+    display: block;
+    font-size: 26rpx;
+    color: #747167; 
+}
+.returnNowItem .time text:nth-child(2){
+    display: block;
+    font-size: 40rpx;
+    color: #333;
+    margin-top: 20rpx;
+}
+/*更多借款信息*/
+.quest{
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    background: #fff;
+    margin-top: 20rpx;
+    padding-left: 20rpx;
+    color: #333;
+}
+.questList{
+    width: 95%;
+    margin: 0 auto;
+    height: 450rpx;
+    border: 2rpx solid #05B8FF;
+    background: #fff;
+    margin-top: 20rpx;
+}
+.questList view{
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #333;
+    border-bottom:2rpx solid #DBDBDB;
+    font-size: 30rpx;
+    box-sizing: border-box;
+}
+.questList view text{
+    display: block;
+    width: 90%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+.questList view i{
+    display: block;
+    width: 10%;
+    height: 100%;
+    font-size: 28rpx;
+    float: right;
+    text-align: right;
+}
+

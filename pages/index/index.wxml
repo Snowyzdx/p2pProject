@@ -1,0 +1,157 @@
+<scroll-view scroll-y="true" id="mainContainer">
+<view>
+    <swiper class="lunbo" indicator-dots="true" indicator-color="#fff" indicator-active-color="#333" autoplay="true" interval="2000">
+        <swiper-item>
+        <image bindtap="onProjectTap" data-typeid="{{lunboList[0].typeCode}}" src="/upload/{{lunboList[0].imgUrl}}" data-id="{{lunboList[0].id}}"></image>
+        </swiper-item>
+        <swiper-item>
+           <image bindtap="onProjectTap"data-typeid="{{lunboList[1].typeCode}}" data-id="{{lunboList[1].id}}" src="/upload/{{lunboList[1].imgUrl}}"></image>
+        </swiper-item>
+        <swiper-item>
+           <image bindtap="onProjectTap" data-typeid="{{lunboList[2].typecode}}" src="/upload/{{lunboList[2].imgUrl}}" data-id="{{lunboList[2].id}}"></image>
+        </swiper-item>
+        <swiper-item>
+           <image bindtap="onProjectTap" data-typeid="{{lunboList[3].typecode}}" src="/upload/{{lunboList[3].imgUrl}}" data-id="{{lunboList[3].id}}"></image>
+        </swiper-item>
+        <swiper-item>
+           <image bindtap="onProjectTap" data-typeid="{{lunboList[4].typecode}}" src="/upload/{{lunboList[4].imgUrl}}" data-id="{{lunboList[4].id}}"></image>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="category">
+    <view class="cat cat01">
+      <view class="wenzi">
+        <text class="catText01">{{firstInvestList[0].invest}}%</text><text class="catText02">{{firstInvestList[0].timesum}}天</text>
+         <text class="catText03">{{firstInvestList[0].typename}}</text>
+      </view>
+      <view class="img" bindtap="onProjectTap" data-id="{{firstInvestList[0].typecode}}" style="background-image: url('/images/icon01.png');background-size: 80%;background-position: center;background-repeat: no-repeat"></view>
+    </view>
+    <view class="cat cat02">
+     <view class="wenzi">
+        <text class="catText01">{{firstLoganList[0].maxmoney}}元</text><text class="catText02"> 最高</text>
+         <text class="catText03">{{firstLoganList[0].typename}}</text>
+      </view>
+      <view class="img" bindtap="onProjectTap" data-id="{{firstLoganList[0].typecode}}" style="background-image: url('/images/icon02.png');background-size: 80%;background-position: center;background-repeat: no-repeat"></view>
+   </view>   
+    <view class="cat cat03">
+      <view class="wenzi" data-id="{{firstInvestList[1].typecode}}">
+        <text class="catText01">{{firstInvestList[1].invest}}%</text><text class="catText02">{{firstInvestList[1].timesum}}天</text>
+         <text class="catText03">{{firstInvestList[1].typename}}</text>
+      </view>
+      <view class="img"  bindtap="onProjectTap" data-id="{{firstInvestList[1].typecode}}" style="background-image: url('/images/icon03.png');background-size: 80%;background-position: center;background-repeat: no-repeat"></view>
+    </view>
+    <view class="cat cat04">
+       <view class="wenzi">
+        <text class="catText01">{{firstLoganList[1].maxmoney}}元</text><text class="catText02"> 最高</text>
+         <text class="catText03">{{firstLoganList[1].typename}}</text>
+      </view>
+      <view class="img" bindtap="onProjectTap" data-id="{{firstLoganList[1].typecode}}" style="background-image: url('/images/icon04.png');background-size: 80%;background-position: center;background-repeat: no-repeat"></view>
+    </view>
+</view>
+
+<view class="list">
+   <scroll-view scroll-x="true" class="scrollContainer">
+    <view class="listBox">
+        <view>
+          <image bindtap="onProjectTap" data-id="{{secondList[0].typecode}}" src="/upload/{{secondList[0].imgUrl}}"></image>
+        </view>  
+         <view>
+          <image bindtap="onProjectTap" data-id="{{secondList[1].typecode}}" src="/upload/{{secondList[1].imgUrl}}"></image>
+        </view> 
+         <view>
+          <image bindtap="onProjectTap" data-id="{{secondList[2].typecode}}" src="/upload/{{secondList[2].imgUrl}}"></image>
+        </view>  
+        <view>
+          <image bindtap="onProjectTap" data-id="{{secondList[3].typecode}}" src="/upload/{{secondList[3].imgUrl}}"></image>
+        </view>
+    </view>
+  </scroll-view>
+</view>
+
+<!--安全广告-->
+<view id="safety">
+  <image bindtap="onProjectTap" data-id="{{adList[0].typecode}}" src="/images/ad.png"></image>
+</view>
+<!--特色理财-->
+  <view id="teseInvest" data-id="{{thirdList[0].typecode}}" bindtap="onProjectTap">
+    <text class="title">{{thirdList[0].typename}}</text>
+    <view class="invest">
+     {{thirdList[0].invest}}%
+    </view>
+    <view class="detail">
+      <text style="color#333">借款期限：{{thirdList[0].timesum}}个月</text>
+      <text style="border:0;color:#333;font-size:18px">最高可借：{{thirdList[0].maxmoney}}￥</text>
+    </view>
+  </view>
+<!--大家都在投-->
+<view id="hotInvest">
+ <view class="header">
+   <text class="title">大家都在投</text>
+   <text class="num">2300490人次</text>
+ </view>
+  <view class="project">
+      <view class="invest">
+        <text>{{fothList[0].invest}}%</text>
+        <text>预期年化</text>
+      </view>
+      <view class="typeName">
+        <view class="title">
+          <text>{{forthList[0].typename}}</text>
+          <i class="iconfont icon-baoxian"></i>
+        </view>
+        <view class="timesum"> 
+          <text>封闭区</text>
+          <text>{{forthList[0].timesum}}天</text>
+        </view>
+      </view>
+      <view class="qbtn" catchtap="onProjectTap" data-typeid="{{fothList[0].typecode}}" data-id="{{fothList[0].id}}">
+          立即抢购
+      </view>
+  </view>
+  <view class="project">
+      <view class="invest">
+        <text>{{fothList[1].invest}}%</text>
+        <text>预期年化</text>
+      </view>
+      <view class="typeName">
+        <view class="title">
+          <text>{{fothList[1].typename}}</text>
+          <i class="iconfont icon-baoxian"></i>
+        </view>
+        <view class="timesum"> 
+          <text>封闭区</text>
+          <text>{{fothList[1].timesum}}天</text>
+        </view>
+      </view>
+      <view class="qbtn" catchtap="onProjectTap" data-typeid="{{fothList[0].typecode}}" data-id="{{fothList[0].id}}">
+          立即抢购
+      </view>
+  </view>
+  <view class="project">
+      <view class="invest">
+        <text>{{fothList[2].invest}}%</text>
+        <text>预期年化</text>
+      </view>
+      <view class="typeName">
+        <view class="title">
+          <text>{{fothList[2].typename}}</text>
+          <i class="iconfont icon-baoxian"></i>
+        </view>
+        <view class="timesum"> 
+          <text>封闭区</text>
+          <text>{{fothList[2].timesum}}天</text>
+        </view>
+      </view>
+      <view class="qbtn" catchtap="onProjectTap" data-typeid="{{fothList[0].typecode}}" data-id="{{fothList[0].id}}">
+          立即抢购
+      </view>
+  </view>
+</view> 
+
+<!--footer-->
+<view id="footer">
+  <text>© design by Asiazdx</text>
+  <text>预期收益非平台承诺收益，市场有风险，投资需谨慎</text>
+</view>
+<!--导航-->
+</scroll-view>

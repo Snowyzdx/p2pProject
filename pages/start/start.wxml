@@ -1,0 +1,4 @@
+<view id="mian">
+    <view class="jamp" bindtap="jamp">跳过</view>
+    <view class="timeTiper">{{tiper}}秒</view>
+</view>

@@ -1,0 +1,28 @@
+<view class="mainContainer">
+    <view class='title'> 
+        <view>贷款申请单</view>
+    </view>
+    <view class="confirm">
+        <view class="tag">
+            <view>贷款金额</view>
+            <view>{{sum}}￥</view>
+        </view>
+        <view class="tag">
+            <view>贷款期限</view>
+            <view>{{time}}</view>
+        </view>
+        <view class="tag">
+            <view>利息</view>
+            <view>{{invest}}%</view>
+        </view>
+        <view class="tag">
+            <view>服务费</view>
+            <view>{{saverFeed}}￥</view>
+        </view>
+        <view class="tag">
+            <view>每月还款</view>
+            <view>{{returnMoney}}￥</view>
+        </view>
+    </view>
+    <button class='btn' bindtap="confirm" disabled='{{disabled}}'>确 认</button>
+</view>

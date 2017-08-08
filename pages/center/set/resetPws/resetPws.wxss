@@ -1,0 +1,107 @@
+#mainContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    position: relative;
+    font-size: 30rpx;
+    color: #666;
+}
+.logo{
+    width: 120rpx;
+    height: 120rpx;
+    margin-top: 0;
+    background-image: url('/images/font/logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.phoneNum{
+    width: 90%;
+    height: 100rpx;
+    margin: 0 auto;
+    border-bottom: 2rpx solid #E4E4E4;
+    line-height: 100rpx;
+    margin-top: 100rpx;
+}
+.phoneNum input{
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+.code{
+    width: 90%;
+    height: 80rpx;
+    margin: 0 auto;
+    margin-top: 40rpx;
+}
+.code input{
+    width: 68%;
+    height: 80rpx;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    border-bottom: 2rpx solid #E4E4E4;
+}
+.code button{
+    display: block;
+    float: right;
+    width: 28%;
+    height: 80rpx;
+    font-size: 30rpx;
+    border:2rpx solid #FF5A57;
+    color: #666;
+}
+form{
+    width: 90%;
+    font-size: 30rpx;
+    margin: 0 auto;
+    text-align: center;
+}
+form view{
+    width: 100%;
+    height: 100rpx;
+    margin-top: 30rpx;
+}
+form view label{
+    display: block;
+    float: left;
+    height: 100%;
+    line-height: 100rpx;
+    text-align: left;
+    color:#666;
+}
+form view input{
+    display: block;
+    float: right;
+    width: 72%;
+    height: 100%;
+    text-align: left;
+    color: #333;
+    box-sizing: border-box;
+    border-bottom: 2rpx solid #E4E4E4;
+}
+.save{
+    margin-top: 20rpx;
+    width: 70%;
+    height: 80rpx;
+    border-radius: 20rpx;
+    background: #FF5A57;
+    color: #fff;
+    font-size: 36rpx;
+    font-weight: 600;
+    line-height: 80rpx;
+}
+.notice01{
+    width: 90%;
+    height: 80rpx;
+    text-align: center;
+    color: red;
+    margin-top: 20rpx;
+}
+.notice{
+    width:90%;
+    height: 80rpx;
+    text-align: center;
+    color:red;
+}

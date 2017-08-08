@@ -1,0 +1,31 @@
+<view class="mainContainer">
+<view class="title">
+    还款
+</view>
+<view class="money">
+    <text>￥180.08</text>
+    <text>已抵扣:￥10.00</text>
+</view>
+<view class="fangshi">
+    <view class="jifen">
+            <text class="youhuiquan">优惠券</text>
+            <view catchtap="showyouhuiTag">
+                <text>不使用优惠券 </text>
+                <i class="iconfont icon-youjiantou"></i>
+            </view>
+    </view>
+    <view class="bankCard">
+        <text class="zhifufs">支付方式</text>
+        <view class="selectFangshi" catchtap="showZhifuTag">
+            <text>中国农业银行（尾号6779）</text>
+            <i class="iconfont icon-youjiantou"></i>
+        </view>
+    </view>
+</view>
+<view id="zhifu" bindtap="returnMoney">
+   确认还款
+</view>
+</view>
+
+
+

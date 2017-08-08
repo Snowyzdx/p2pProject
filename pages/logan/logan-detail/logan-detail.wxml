@@ -1,0 +1,26 @@
+<view class="mainContainer">
+<!--输入借款金额-->
+    <view class="banner">
+        <view class="title">
+            输入借款金额
+        </view>
+        <view class="sum">
+            <input value="{{sum}}￥" type="text" bindblur="validate"/>
+        </view>
+    </view>
+<!--选择借款期限-->
+<view class="time">
+    <view bindtap="showTimeSum" class="showTimeSum">
+     <text>{{time}}</text>
+     <i class="iconfont icon-shangjiantou"></i>
+    </view>
+</view>
+<!--还款计算-->
+<view class="jisuan">
+    <view style="color:#888;font-size:28rpx;">您每月需还款</view>
+    <view style="color:#888;font-size:28rpx;">{{everyMoney}}</view>
+    <view style="color:#888;font-size:28rpx;">温馨提示</view>
+    <view style="color:#888;font-size:28rpx;">计算结果仅为试算，实际结果以还款计划为准！</view>
+</view>
+<button class="toLogan" bindtap="toLogan">申请借款</button>
+</view>

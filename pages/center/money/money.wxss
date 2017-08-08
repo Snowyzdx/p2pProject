@@ -1,0 +1,107 @@
+.title{
+    font-size: 40rpx;
+    font-weight: 600;
+    color: #333;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+}
+#chongzhiForm{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 40rpx;
+}
+.radio-group{
+    width: 100%;
+}
+.radio{
+    display: block;
+    width: 100%;
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #333;
+}
+.radio text{
+    display: block;
+    width: 100%;
+    margin-top: 20rpx;
+    margin-bottom: 30rpx;
+    font-weight: 400;
+    color: #8D8072;
+    font-size: 28rpx;
+    text-align: center;
+}
+.jine{
+    width: 100%;
+    height: 60rpx;
+    margin-top: 50rpx;
+    line-height: 50rpx;
+    border-bottom: 2rpx solid #B9B7B4;
+}
+.jine text{
+    font-size: 38rpx;
+}
+.jine label{
+    width: 30%;
+    height: 100%;
+    float: left;
+    font-weight: 500;
+}
+.jine input{
+    width: 60%;
+    height: 100%;
+    float: left;
+    color: #8D8072;
+    font-size: 34rpx;
+    text-align: center;
+}
+/*手续费*/
+.serve{
+    margin-top: 50rpx;
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.serve label{
+    float: left;
+    width: 30%;
+    height: 60rpx;
+}
+.serve input{
+    float: left;
+    height: 60rpx;
+    width: 60%;
+    text-align: right;
+}
+/*实际扣款*/
+.shiji{
+    margin-top: 30rpx;
+    height: 60rpx;
+    width: 100%;
+}
+.shiji label{
+    float: left;
+    width: 30%;
+    height: 60rpx;
+}
+.shiji input{
+    float: left;
+    width: 60%;
+    height: 60rpx;
+    text-align: right;
+}
+.tixing{
+    width: 100%;
+    height: 40rpx;
+    margin-top: 60rpx;
+    font-weight: 400;
+    color: #8D8072;
+    font-size: 28rpx;
+    text-align: center; 
+}
+
+#sub{
+    width: 100%;
+    background: #05B8FF;
+    color: #fff;
+    margin-top: 30rpx;
+}

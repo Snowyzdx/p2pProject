@@ -1,0 +1,169 @@
+page{
+    background:"#FAF7F5"; 
+}
+.title{
+    margin-top: 40rpx;
+    font-size: 40rpx;
+    font-weight: 600;
+    margin-left: 20rpx;
+}
+.zijin{
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-top: 20rpx;
+    padding: 0 20rpx;
+    position: relative;
+}
+.yue{
+    font-size: 32rpx;
+    float: left;
+    margin-left: 20rpx;
+}
+.chongzhi{
+    float: left;
+    width: 100rpx;
+    height: 50rpx;
+    position: absolute;
+    right: 60rpx;
+    text-align: center;
+    border-radius: 15%;
+    color: #07A0FB;
+    font-size: 30rpx;
+    line-height: 50rpx;
+    border: 2rpx solid #07A0FB;
+}
+#noReturnList{
+    width: 100%;
+    height:980rpx;
+    margin: 0 auto;
+    margin-top: 60rpx;
+}
+.noRetrunItiem{
+ width: 100%;
+ height: 260rpx;
+ margin-top: 20rpx;
+}
+.shuoming{
+    width: 90%;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 32rpx;
+    position: relative;
+    margin:0 auto;
+}
+.shuoming view{
+    display: block;
+    float: left;
+    position: absolute;
+}
+.qishu{
+    margin-left: 10rpx;
+    font-size: 28rpx;
+    color: #8B8989;
+}
+.detail{
+    right: 40rpx;
+    width: 100rpx;
+    height: 60rpx;
+    text-align: center;
+    color: #07A0FB;
+    text-decoration: underline; 
+}
+.about{
+    width: 90%;
+    height: 200rpx;
+    box-shadow:0rpx 0rpx 30rpx #cfcfcf;
+    margin: 0 auto;
+    box-sizing: border-box;
+    line-height: 200rpx;
+    border-radius: 5%;
+    margin-top: 10rpx;
+}
+.returnMoney{
+    float: left;
+    width: 40%;
+    height: 100%;
+    background: #07A0FB;
+    text-align: center;
+     border-bottom-left-radius: 5%;
+    border-top-left-radius: 5%;
+    position: relative;
+}
+.returnMoney text{
+    position: absolute;
+    display: block;
+    color: #fff;
+    width: 100%;
+    height: 40rpx;
+    line-height: 40rpx;
+}
+.returnMoney text:nth-child(1){
+    font-size: 40rpx;
+    top: 40rpx;
+}
+.returnMoney text:nth-child(2){
+    font-size: 30rpx;
+    top: 100rpx;
+}
+.returnTime{
+    float: left;
+    position: relative;
+    width: 60%;
+    height: 100%;
+    border-radius: 5%;
+    box-sizing: border-box;
+    padding-left: 10rpx;
+
+}
+.returnTime text{
+    position: absolute;
+    display: block;
+}
+.returnTime text:nth-child(1){
+    width: 70%;
+    height: 40rpx;
+    font-size: 40rpx;
+    font-weight: 600;
+    line-height: 40rpx;
+    color: #333;
+    top: 40rpx;
+}
+.returnTime text:nth-child(2){
+    width: 120rpx;
+    height: 60rpx;
+    font-size: 32rpx;
+    line-height: 20rpx;
+    text-align: center;
+    top: 70rpx;
+    right: 30rpx;
+    color: #07A0FB;
+}
+
+.returnTime text:nth-child(3){
+    width: 70%;
+    height: 32rpx;
+    font-size: 32rpx;
+    line-height: 32rpx;
+    top: 80rpx;
+    color: #666;
+}
+#returned{
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: 600;
+    position: fixed;
+    bottom: 0rpx;
+}
+#returned text{
+    font-size: 36rpx;
+    color: #07A0FB;
+}
+#returned i{
+    font-size: 28rpx;
+    color: #07A0FB;
+    font-weight: 600;
+}

@@ -1,0 +1,102 @@
+<view class="containerMain">
+    <view class="banner">
+    </view>
+    <!--下拉列表-->
+    <!--产品介绍-->
+     <view class="menue" style="height:100rpx;" bindtap="zhankai" data-id="first">
+        <text style="font-weight:{{blod01}}">产品介绍</text>
+        <i class="iconfont icon-shangjiantou" style="transform: rotate({{active01}});"></i> 
+     </view>
+    <view class="con">
+            <view class="select" hidden="{{selected01}}">
+                <view style="color:#666;font-size:28rpx;line-height:50rpx">
+                    凭工资卡预估借款额度，补充信用报告与实名信息，可借金额达20万，资金快至30分钟到账。
+                </view>
+                <view style="width:100%;height:40rpx;line-height:40rpx">
+                    <text style="display:block;float:left">借款额度</text>
+                    <text style="display:block;float:right">2万~20万</text>
+                </view>
+                <view style="width:100%;height:40rpx;line-height:40rpx">
+                    <text style="display:block;float:left">借款期限</text>
+                    <text style="display:block;float:right">3、6、12、24、48个月</text>
+                </view>
+                <view style="width:100%;height:40rpx;line-height:40rpx">
+                    <text style="display:block;float:left">借款费率</text>
+                    <text style="display:block;float:right">0.78%~1.89%</text>
+                </view>
+            </view>
+     </view>
+ <!--申请条件-->
+     <view class="menue" bindtap="zhankai" data-id="second">
+        <text style="font-weight:{{blod02}}">申请条件</text>
+        <i class="iconfont icon-shangjiantou" style="transform: rotate({{active02}});"></i> 
+     </view>
+    <view class="con">
+            <view class="select" hidden="{{selected02}}">
+                <text style="display:block;width:100%;height:40rpx;line-height:40rpx">1.年龄介于22周岁（含）至60周岁（不含）之间</text>
+                <text style="display:block;width:100%;height:40rpx;line-height:40rpx;">2.最近连续6个月工资流水（银行代发工资）</text>
+                <text style="display:block;width:100%;height:40rpx;line-height:40rpx">3.本人信用报告（可到本地人民银行查询）</text>
+                <text style="display:block;width:100%;height:40rpx;line-height:40rpx;">4.本人实名制手机号</text>
+            </view>
+     </view>
+<!--申请流程-->
+    <view class="menue" bindtap="zhankai" data-id="third">
+        <text style="font-weight:{{blod03}}">申请流程</text>
+        <i class="iconfont icon-shangjiantou" style="transform: rotate({{active03}});"></i> 
+     </view>
+    <view class="con">
+        <view class="select" hidden="{{selected03}}">
+            <view style="width:100%;height:40rpx;line-height:40rpx;">
+                <text style="display:block;float:left">①额度预估</text>
+                <text style="display:block;float:left;margin-left:20rpx;">通过验证已开通网银的工资卡</text>
+            </view>
+            <view style="width:100%;height:40rpx;line-height:40rpx;">
+                <text style="display:block;float:left;">③资格验证</text>
+                <text style="display:block;float:left;margin-left:20rpx;">信用报告验证、手机验证、身份验证</text>
+            </view>
+            <view style="width:100%;height:40rpx;line-height:40rpx;">
+                <text style="display:block;float:left;">提交审批</text>
+                <text style="width:100%;height:40rpx;line-height:40rpx;margin-left:20rpx;">资金快至10分钟到账</text>
+            </view>
+        </view>
+    </view>
+<!--费用说明-->
+<view class="menue" bindtap="zhankai" data-id="four">
+        <text style="font-weight:{{blod04}}">费用说明</text>
+        <i class="iconfont icon-shangjiantou" style="transform: rotate({{active04}});"></i> 
+     </view>
+    <view class="con">
+        <view class="select" hidden="{{selected04}}">
+        <view style="width:100%;height:40rpx;line-height:40rpx;">
+            <text style="display:block;float:left;color:#333">借款月费率</text>
+            <text style="display:block;float:right;color:#333">0.78%~1.89%</text>
+        </view>
+        <view style="width:100%;height:40rpx;line-height:40rpx;">
+            <text style="display:block;float:left;color:#333">费用组成</text>
+            <text style="display:block;float:right;color:#333">平台服务费+利息</text>
+        </view>
+        <view style="margin-top:20rpx">
+            <text style="width:100%;height:40rpx;line-height:40rpx; color:#888">平台服务费=前期服务费+分期服务费</text>
+            <text style="width:100%;height:40rpx;line-height:40rpx;color:#888">前期服务费：资金到账前一次性扣除的平台服务费</text>
+            <text style="width:100%;height:40rpx;line-height:40rpx;color:#888">分期服务费：按月缴纳的平台服务费</text>
+        </view>
+        </view>
+    </view>
+    <!--支持的城市-->
+    <view class="menue" bindtap="zhankai" data-id="foth">
+        <text style="font-weight:{{blod05}}">支持的城市</text>
+        <i class="iconfont icon-shangjiantou" style="transform: rotate({{active05}});"></i> 
+     </view>
+    <view class="con">
+    <view class="select" hidden="{{selected05}}" style="color:#888">
+        覆盖全国各省市（暂不支持西藏、甘肃、港澳台地区）
+    </view>
+    </view>
+    <!--支持的银行-->
+    <view class="menue" bindtap="zhankai" data-id="six">
+        <text>支持的银行</text>
+        <i class="iconfont icon-shangjiantou" style="transform: rotate({{active06}});"></i> 
+     </view>
+     <!--马上申请-->
+     <button bindtap="toLogan" class="sub">立即申请</button>
+</view>

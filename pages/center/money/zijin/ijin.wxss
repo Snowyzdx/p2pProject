@@ -1,0 +1,85 @@
+/* pages/center/money/zijin/ijin.wxss */
+page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    background: #FAFAEA;
+}
+.mainContainer{
+    width: 100%;
+    height: 1000rpx;
+    background: #fff;
+    margin-top: 60rpx;
+}
+.footer{
+    width: 100%;
+    height: 60rpx;
+    position: absolute;
+    bottom: 20rpx;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 26rpx;
+    color: #868176;
+}
+.myMoney{
+    padding-top: 30rpx;
+    padding-left: 20rpx;
+    width: 100%;
+    height: 200rpx;
+    border-bottom: 2rpx solid #E0DBD3;
+    font-size: 36rpx;
+    color: #333;
+}
+.myMoney i{
+    font-size: 44rpx;
+    color: #EE1919;
+}
+.myMoney view{
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+.myMoney view:nth-child(2) text{
+    display: block;
+    width: 100rpx;
+    height: 80rpx;
+    float: right;
+    margin-right: 30rpx;
+    line-height: 120rpx;
+    text-align: center;
+    color: #EE1919;
+}
+/*资金流动明细*/
+.trans{
+    width: 100%;
+    height: 400rpx;
+    margin-top: 40rpx;
+    padding-left: 20rpx;
+    font-size: 36rpx;
+    color: #333;
+}
+.transLeft{
+    height: 80rpx;
+    line-height: 80rpx;
+    float: left;
+}
+.transRight{
+    height: 80rpx;
+    line-height: 80rpx;
+    float: right;
+    margin-right: 40rpx;
+   color: #EE1919;
+   font-size: 30rpx;
+}
+.notice{
+    width: 90%;
+    margin: 0 auto;
+    height: 100rpx;
+    margin-top: 40rpx;
+    text-align: left;
+    font-size: 28rpx;
+    color: #8B8986;
+    line-height: 40rpx;
+    background: #FAFAF0;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>人人理财后台管理系统</title>
+</head>
+<body>
+<div id="mian" style="position:relative;width: 1000px;border: 1px solid #666; height: 600px;margin-left: 80px;box-sizing:border-box;padding-left:20px;padding-right:20px;margin-top: 20px">
+    <div style="width: 50%;position: absolute;left: 0;right: 0;text-align: center">
+    <h4 style="display: block;width: 100%;text-align: center">申请人个人信息</h4>
+    {{foreach $data as $v}}
+        <p style="text-align: left;box-sizing: border-box;padding-left: 20px;">
+            <span style="font-weight: 600;color: #333">姓名:</span>
+            <span>{{$v['username']}}</span>
+        </p>
+    <p style="text-align: left;box-sizing: border-box;padding-left: 20px;">
+        <span style="font-weight: 600;color: #333">电话:</span>
+        <span>{{$v['username']}}</span>
+    </p>
+    <p style="text-align: left;box-sizing: border-box;padding-left: 20px;">
+        <span style="font-weight: 600;color: #333">身份证号码:</span>
+        <span>{{$v['cardID']}}</span>
+    </p>
+    <p style="text-align: left;box-sizing: border-box;padding-left: 20px;">
+        <span style="font-weight: 600;color: #333">住址:</span>
+        <span>{{$v['home_address']}}</span>
+    </p>
+    <p style="text-align: left;box-sizing: border-box;padding-left: 20px;">
+        <span style="font-weight: 600;color: #333">教育背景:</span>
+        <span>{{$v['education_bk']}}</span>
+    </p>
+    {{/foreach}}
+    </div>
+    <div style="width:50%;position: absolute;right: 0;top: 0;text-align: center">
+    <h4 style="display: block;width: 100%;text-align: center">申请工作信息</h4>
+    {{foreach $data01 as $v1}}
+        <p style="text-align: left;box-sizing: border-box;padding-left: 20px;">
+            <span style="font-weight: 600;color: #333">公司名:</span>
+            <span>{{$v1['companyName']}}</span>
+        </p>
+    <p style="text-align: left;box-sizing: border-box;padding-left: 20px;">
+        <span style="font-weight: 600;color: #333">公司电话:</span>
+        <sapn>{{$v1['companyTel']}}</sapn>
+    </p>
+    <p style="text-align: left;box-sizing: border-box;padding-left: 20px;">
+        <span style="font-weight: 600;color: #333">公司地址:</span>
+        <span>{{$v1['companyAddress']}}}</span>
+    </p>
+    <p style="text-align: left;box-sizing: border-box;padding-left: 20px;">
+        <span style="font-weight: 600;color: #333">工资卡类型:</span>
+        <span>{{$v1['salaryCardType']}}</span>
+    </p>
+    <p style="text-align: left;box-sizing: border-box;padding-left: 20px;">
+        <span style="font-weight: 600;color: #333">工资卡号:</span>
+        <span>{{$v1['salaryCard']}}</span>
+    </p>
+    {{/foreach}}
+        </div>
+    <div style="position: absolute;top:300px;">
+        {{foreach $data02 as $v2}}
+        <h4 style="display: block;width: 100%;text-align: center">紧急联系人信息</h4>
+        <p style="text-align: left;box-sizing: border-box;padding-left: 20px;">
+            <span style="font-weight: 600;color: #333">联系人姓名:</span>
+            <sapn>{{$v2['name']}}</sapn>
+        </p>
+        <p style="text-align: left;box-sizing: border-box;padding-left: 20px;">
+            <span style="font-weight: 600;color: #333">联系人关系:</span>
+            <span>{{$v2['relationship']}}</span>
+        </p>
+        <p style="text-align: left;box-sizing: border-box;padding-left: 20px;">
+            <span style="font-weight: 600;color: #333">联系人电话:</span>
+            <span>{{$v2['phone']}}</span>
+        </p>
+        {{/foreach}}
+    </div>
+</div>
+</body>
+</html>

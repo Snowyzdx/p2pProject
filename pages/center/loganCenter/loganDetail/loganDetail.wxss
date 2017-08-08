@@ -1,0 +1,89 @@
+page{
+    background:#FAFAF5;
+}
+.banner{
+    width: 90%;
+    height: 26%;
+    padding-top: 40rpx;
+    margin: 0 auto;
+}
+.title{
+    font-weight: 600;
+    color: #333;
+}
+.head{
+    width: 100%;
+    height: 40rpx;
+    font-size: 28rpx;
+    margin-top: 30rpx;
+}
+.head view{
+    float: left;
+    width: 33.3%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    line-height: 40rpx;
+    color: #968D81;
+}
+.headtr{
+    width: 100%;
+    height: 80rpx;
+    justify-content: center;
+    line-height: 80rpx;
+    text-align: center;
+}
+.headtr .td{
+    width: 33.3%;
+    height: 100%;
+    float: left;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+}
+/*还款列表*/
+.returnList{
+    width: 90%;
+    height: 880rpx;
+    box-shadow:2rpx 5rpx 30rpx #9f9f9f;
+    margin: 0 auto;
+}
+.th{
+    width: 100%;
+    height: 80rpx;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 20rpx;
+    border-bottom:2rpx solid #E5E5E5;
+}
+.th .td{
+    width: 33.3%;
+    height: 100%;
+    line-height: 80rpx;
+    text-align: center;
+    float: left;
+    color: #333;
+}
+#list{
+    width: 100%;
+    height: 800rpx;
+    background: #fff;
+    margin: 0 auto;
+}
+#list .tr{
+    width: 100%;
+    height: 90rpx;
+    margin-top: 20rpx;
+    line-height: 90rpx;
+    font-size: 38rpx;
+}
+#list .tr .td{
+    width: 33.3%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    float: left;
+    font-size: 36rpx;
+    color: #666;
+}

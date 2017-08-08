@@ -1,0 +1,79 @@
+.jisuan{
+    width: 100%;
+    height: 400rpx;
+}
+.banner{
+    width: 100%;
+    height: 300rpx;
+    padding: 20rpx;
+    border-bottom: 2rpx solid #E9EBF0;
+}
+.title{
+    width: 100%;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #878787;
+    margin-top: 20rpx;
+}
+.sum{
+    width: 100%;
+    height: 140rpx;
+    margin-top: 60rpx;
+    padding-top: 20rpx;
+}
+.sum input{
+    display: block;
+    width: 100%;
+    height: 100rpx;
+    margin: 0 auto;
+    color: #A5A5A5;
+    font-size: 40rpx;
+    font-weight: 600;
+    text-align: center;
+}
+.selectTime{
+    width: 80%;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 0 auto;
+    color: #fff;
+    background: #00C2AA;
+    font-size: 36rpx;
+}
+/*选择时间*/
+.showTimeSum{
+    width: 80%;
+    height: 120rpx;
+    line-height: 120rpx;
+    margin: 0 auto;
+}
+.showTimeSum text{
+    display: block;
+    float: left;
+    color: #555;
+    font-size: 36rpx;
+}
+.showTimeSum i{
+    display: block;
+    float: right;
+    color: #999;
+    font-size: 30prx;
+}
+/*计算*/
+.jisuan{
+    width: 100%;
+    height: 300rpx;
+    background: #F9F9F9;
+    line-height: 60rpx;
+    padding-top: 30rpx;
+    padding-left: 30rpx;
+}
+.toLogan{
+    width: 80%;
+    height: 80rpx;
+    color: #fff;
+    font-size: 36rpx;
+    background: #00C2AA;
+}
